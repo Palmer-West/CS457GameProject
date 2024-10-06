@@ -2,7 +2,7 @@ import socket
 import threading
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("server.log"), logging.StreamHandler()])
 
 class WarGameServer:
     def __init__(self, host='127.0.0.1', port=5555):
@@ -18,7 +18,7 @@ class WarGameServer:
 
         # main running loop
         while True:
-            client_socket, client_address = self.server_socet.accept()
+            client_socket, client_address = self.server_socket.accept()
             logging.info(f"Client connected from {client_address}")
             self.clients.append(client_socket)
 
@@ -28,10 +28,12 @@ class WarGameServer:
         try:
             while True:
                 message = client_socket.recv(1024).decode('utf-8')
-                if not message:
+                if message:
+                    logging.info(f"Received message from client: {message}")
+                    print(f"Received message from client: {message}")
+                    self.broadcast_message(f"Message from a client: {message}", client_socket)
+                else:
                     break
-                logging.info(f"Received message: {message}", client_socket)
-                self.broadcast_message(f"Message from client {client_address}: {message}, client_socket")
         except ConnectionResetError:
             logging.error(f"Client: {client_address} disconnected unexpectedly")
         finally:

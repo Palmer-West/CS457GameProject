@@ -2,7 +2,7 @@ import socket
 import threading
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("client.log"), logging.StreamHandler()])
 
 class WarGameClient:
     def __init__(self, host='127.0.0.1', port=5555):
@@ -25,6 +25,7 @@ class WarGameClient:
             while True:
                 message = input("Message: ")
                 self.client_socket.send(message.encode('utf-8'))
+                logging.info(f"Message sent to server: {message}")
         except socket.error as e: 
             logging.error(f"Error sending message: {e}")
         finally:
@@ -33,14 +34,14 @@ class WarGameClient:
     def recieve_messages(self):
         try: 
             while True:
-                message = self.client_socket.reciv(1024).decode('utf-8')
+                message = self.client_socket.recv(1024).decode('utf-8')
                 if not message:
                     break
                 logging.info(f"Received message: {message}")
         except socket.error as e:
             logging.error(f"Error receving message: {e}")
         finally: 
-            self.client_socet.close()
+            self.client_socket.close()
 
 if __name__ == "__main__":
     client = WarGameClient()

@@ -1,0 +1,6 @@
+2024-10-06 11:29:35,643 - INFO - Connected to server at 127.0.0.1:5555
+2024-10-06 11:29:38,323 - INFO - Message sent to server: hello
+2024-10-06 11:29:48,659 - ERROR - Error receving message: [Errno 104] Connection reset by peer
+2024-10-06 11:29:54,099 - INFO - Connected to server at 127.0.0.1:5555
+2024-10-06 11:29:56,095 - INFO - Message sent to server: hello
+2024-10-06 11:30:00,713 - ERROR - Error receving message: [Errno 104] Connection reset by peer
