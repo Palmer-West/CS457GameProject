@@ -1,61 +1,66 @@
+import sys
 import socket
-import threading
-import logging
+import selectors
+import types
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("server.log"), logging.StreamHandler()])
+sel = selectors.DefaultSelector()
 
-class WarGameServer:
-    def __init__(self, host='127.0.0.1', port=5555):
-        self.host = host
-        self.port = port
-        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.clients = []
+# this routine is called when the LISTENING SOCKET gets a
+# connection request from a new client
 
-    def start_server(self):
-        self.server_socket.bind((self.host, self.port))
-        self.server_socket.listen(5)
-        logging.info(f"Server started on {self.host}:{self.port}, waiting for connections...")
-
-        # main running loop
-        while True:
-            client_socket, client_address = self.server_socket.accept()
-            logging.info(f"Client connected from {client_address}")
-            self.clients.append(client_socket)
-
-            thread = threading.Thread(target=self.handle_client, args=(client_socket,))
-
-    def handle_client(self, client_socket):
-        try:
-            while True:
-                message = client_socket.recv(1024).decode('utf-8')
-                if message:
-                    logging.info(f"Received message from client: {message}")
-                    print(f"Received message from client: {message}")
-                    self.broadcast_message(f"Message from a client: {message}", client_socket)
-                else:
-                    break
-        except ConnectionResetError:
-            logging.error(f"Client: {client_address} disconnected unexpectedly")
-        finally:
-            logging.info(f"Client: {client_address} disconnected")
-            self.clients.remove(client_socket)
-            client_socket.close()
-
-    def broadcast_message(self, message, source_client):
-        for client in self.clients:
-            if client != source_client:
-                try:
-                    client.send(message.encode('utf-8'))
-                except socket.error as e:
-                    logging.error(f"Failed to send message to client: {client_address}: {e}")
-
-    def stop_server(self):
-        for client in self.clients:
-            client.close()
-        self.server_socket.close()
-        logging.info("Server stopped")   
+def accept_wrapper(sock):
+    conn, addr = sock.accept()  # Should be ready to read
+    print("accepted connection from", addr)
+    conn.setblocking(False)
+    data = types.SimpleNamespace(addr=addr, inb=b"", outb=b"")
+    events = selectors.EVENT_READ | selectors.EVENT_WRITE
+    sel.register(conn, events, data=data)
 
 
-if __name__ == "__main__":
-    server = WarGameServer()
-    server.start_server()     
+# this routine is called when a client is ready to read or write data
+
+def service_connection(key, mask):
+    sock = key.fileobj
+    data = key.data
+    if mask & selectors.EVENT_READ:
+        recv_data = sock.recv(1024)  # Should be ready to read
+        if recv_data:
+            data.outb += recv_data
+        else:
+            print("closing connection to", data.addr)
+            sel.unregister(sock)
+            sock.close()
+    if mask & selectors.EVENT_WRITE:
+        if data.outb:
+            print("echoing", repr(data.outb), "to", data.addr)
+            sent = sock.send(data.outb)  # Should be ready to write
+            data.outb = data.outb[sent:]
+
+
+# main program: set up the host address and port; change them if you need to
+
+host = '127.0.0.1'  # listens to any available IP address.  You might want to use 0.0.0.0 for the real internet
+port = 12358      # fibonacci numbers are cool;  irrelevant to this program, but still cool
+
+# set up the listening socket and register it with the SELECT mechanism
+
+lsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+lsock.bind((host, port))
+lsock.listen()
+print("listening on", (host, port))
+lsock.setblocking(False)
+sel.register(lsock, selectors.EVENT_READ, data=None)
+
+# the main event loop
+try:
+    while True:
+        events = sel.select(timeout=None)
+        for key, mask in events:
+            if key.data is None:
+                accept_wrapper(key.fileobj)
+            else:
+                service_connection(key, mask)
+except KeyboardInterrupt:
+    print("caught keyboard interrupt, exiting")
+finally:
+    sel.close()

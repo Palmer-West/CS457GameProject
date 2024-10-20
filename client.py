@@ -1,48 +1,83 @@
+# multiconn-client.py: creates multiple ECHO clients that communicate simultaneously with the ECHO server
+
+import sys
 import socket
-import threading
-import logging
+import selectors
+import types
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("client.log"), logging.StreamHandler()])
+sel = selectors.DefaultSelector()
 
-class WarGameClient:
-    def __init__(self, host='127.0.0.1', port=5555):
-        self.host = host
-        self.port = port
-        self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+def createMessage(cliendID, slap, tickNum, info):
+    message = clientID
 
-    def connect_to_server(self):
-        try:
-            self.client_socket.connect((self.host, self.port))
-            logging.info(f"Connected to server at {self.host}:{self.port}")
-            thread = threading.Thread(target=self.recieve_messages)
-            thread.start()
-            self.send_messages()
-        except socket.error as e:
-            logging.error(f"Failed to connect to server: {e}")
+# message format "(Client ID, bool slap, int tickNum, additional info (tie cards?))"
+messages = [b"(Test message)"]
 
-    def send_messages(self):
-        try:
-            while True:
-                message = input("Message: ")
-                self.client_socket.send(message.encode('utf-8'))
-                logging.info(f"Message sent to server: {message}")
-        except socket.error as e: 
-            logging.error(f"Error sending message: {e}")
-        finally:
-            self.client_socket.close()
+# this routine is called to create each of the many ECHO CLIENTs we want to create
 
-    def recieve_messages(self):
-        try: 
-            while True:
-                message = self.client_socket.recv(1024).decode('utf-8')
-                if not message:
-                    break
-                logging.info(f"Received message: {message}")
-        except socket.error as e:
-            logging.error(f"Error receving message: {e}")
-        finally: 
-            self.client_socket.close()
+def start_connections(host, port, num_conns):
+    server_addr = (host, port)
+    for i in range(0, num_conns):
+        connid = i + 1
+        print("starting connection", connid, "to", server_addr)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.setblocking(False)
+        sock.connect_ex(server_addr)
+        events = selectors.EVENT_READ | selectors.EVENT_WRITE
+        data = types.SimpleNamespace(
+            connid=connid,
+            msg_total=sum(len(m) for m in messages),
+            recv_total=0,
+            messages=list(messages),
+            outb=b"",
+        )
+        sel.register(sock, events, data=data)
 
-if __name__ == "__main__":
-    client = WarGameClient()
-    client.connect_to_server()
+# this routine is called when a client triggers a read or write event
+
+def service_connection(key, mask):
+    sock = key.fileobj
+    data = key.data
+    if mask & selectors.EVENT_READ:
+        recv_data = sock.recv(1024)  # Should be ready to read
+        if recv_data:
+            print("received", repr(recv_data), "from connection", data.connid)
+            data.recv_total += len(recv_data)
+        if not recv_data or data.recv_total == data.msg_total:
+            print("closing connection", data.connid)
+            sel.unregister(sock)
+            sock.close()
+    if mask & selectors.EVENT_WRITE:
+        if not data.outb and data.messages:
+            data.outb = data.messages.pop(0)
+        if data.outb:
+            print("sending", repr(data.outb), "to connection", data.connid)
+            sent = sock.send(data.outb)  # Should be ready to write
+            data.outb = data.outb[sent:]
+
+
+
+# main program
+
+host = '127.0.0.1'   # localhost; use 0.0.0.0 if you want to communicate across machines in a real network
+port = 12358         # I just love fibonacci numbers
+num_conns = 10       # you can change this to however many clients you want to create
+
+
+start_connections(host, port, num_conns)
+
+# the event loop
+
+try:
+    while True:
+        events = sel.select(timeout=1)
+        if events:
+            for key, mask in events:
+                service_connection(key, mask)
+        # Check for a socket being monitored to continue.
+        if not sel.get_map():
+            break
+except KeyboardInterrupt:
+    print("caught keyboard interrupt, exiting")
+finally:
+    sel.close()
