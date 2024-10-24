@@ -1,83 +1,65 @@
-# multiconn-client.py: creates multiple ECHO clients that communicate simultaneously with the ECHO server
-
-import sys
 import socket
-import selectors
-import types
+import threading
+import queue
 
-sel = selectors.DefaultSelector()
+# Define the server host and port to connect to
+SERVER_HOST = '127.0.0.1'
+SERVER_PORT = 5555
 
-def createMessage(cliendID, slap, tickNum, info):
-    message = clientID
+hostname = socket.gethostname()
+ip = socket.gethostbyname(hostname)
 
-# message format "(Client ID, bool slap, int tickNum, additional info (tie cards?))"
-messages = [b"(Test message)"]
+# Queue for communication between the listener and display threads
+message_queue = queue.Queue()
 
-# this routine is called to create each of the many ECHO CLIENTs we want to create
-
-def start_connections(host, port, num_conns):
-    server_addr = (host, port)
-    for i in range(0, num_conns):
-        connid = i + 1
-        print("starting connection", connid, "to", server_addr)
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.setblocking(False)
-        sock.connect_ex(server_addr)
-        events = selectors.EVENT_READ | selectors.EVENT_WRITE
-        data = types.SimpleNamespace(
-            connid=connid,
-            msg_total=sum(len(m) for m in messages),
-            recv_total=0,
-            messages=list(messages),
-            outb=b"",
-        )
-        sel.register(sock, events, data=data)
-
-# this routine is called when a client triggers a read or write event
-
-def service_connection(key, mask):
-    sock = key.fileobj
-    data = key.data
-    if mask & selectors.EVENT_READ:
-        recv_data = sock.recv(1024)  # Should be ready to read
-        if recv_data:
-            print("received", repr(recv_data), "from connection", data.connid)
-            data.recv_total += len(recv_data)
-        if not recv_data or data.recv_total == data.msg_total:
-            print("closing connection", data.connid)
-            sel.unregister(sock)
-            sock.close()
-    if mask & selectors.EVENT_WRITE:
-        if not data.outb and data.messages:
-            data.outb = data.messages.pop(0)
-        if data.outb:
-            print("sending", repr(data.outb), "to connection", data.connid)
-            sent = sock.send(data.outb)  # Should be ready to write
-            data.outb = data.outb[sent:]
-
-
-
-# main program
-
-host = '127.0.0.1'   # localhost; use 0.0.0.0 if you want to communicate across machines in a real network
-port = 12358         # I just love fibonacci numbers
-num_conns = 10       # you can change this to however many clients you want to create
-
-
-start_connections(host, port, num_conns)
-
-# the event loop
-
-try:
+# Handle receiving messages from the server and pass them to the display thread
+def receive_messages(client_socket):
     while True:
-        events = sel.select(timeout=1)
-        if events:
-            for key, mask in events:
-                service_connection(key, mask)
-        # Check for a socket being monitored to continue.
-        if not sel.get_map():
+        try:
+            message = client_socket.recv(1024).decode('utf-8')
+            if not message:
+                print("Connection closed by server.")
+                break
+            message_queue.put(message)
+        except ConnectionResetError:
+            print("Connection closed by server.")
             break
-except KeyboardInterrupt:
-    print("caught keyboard interrupt, exiting")
-finally:
-    sel.close()
+
+# Game display thread that prints game information from the queue
+def display_game():
+    while True:
+        if not message_queue.empty():
+            message = message_queue.get()
+            print(f"Game Update: {message}")
+
+# Main function to start the client
+if __name__ == "__main__":
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    client_socket.connect((SERVER_HOST, SERVER_PORT))
+
+    # Start a thread to listen for incoming messages from the server
+    receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
+    receive_thread.start()
+
+    # Start a thread to display game information from the queue
+    display_thread = threading.Thread(target=display_game)
+    display_thread.start()
+
+    try:
+        while True:
+            message = input("You: ")
+            if message.lower() == 'quit':
+                print("Sending disconnect message and closing connection.")
+                client_socket.send(message.encode('utf-8'))
+                client_socket.close()
+                break
+            client_socket.send(message.encode('utf-8'))
+
+    except KeyboardInterrupt:
+        print("Client exiting...")
+
+    finally:
+        # Ensure both threads exit cleanly
+        receive_thread.join()
+        display_thread.join()
+        client_socket.close()
