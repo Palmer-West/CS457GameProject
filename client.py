@@ -1,6 +1,14 @@
 import socket
 import threading
 import queue
+import logging
+
+logging.basicConfig(
+    filename="client.log",
+    filemode="w",
+    level=logging.DEBUG,
+    format="| %(asctime)s | %(levelname)s | %(message)s |"
+)
 
 # Define the server host and port to connect to
 SERVER_HOST = '127.0.0.1'
@@ -18,11 +26,11 @@ def receive_messages(client_socket):
         try:
             message = client_socket.recv(1024).decode('utf-8')
             if not message:
-                print("Connection closed by server.")
+                logging.info("Connection closed by server.")
                 break
             message_queue.put(message)
         except ConnectionResetError:
-            print("Connection closed by server.")
+            logging.exception("Connection closed by server.")
             break
 
 # Game display thread that prints game information from the queue
@@ -30,7 +38,7 @@ def display_game():
     while True:
         if not message_queue.empty():
             message = message_queue.get()
-            print(f"Game Update: {message}")
+            logging.info(f"Game Update: {message}")
 
 # Main function to start the client
 if __name__ == "__main__":
@@ -56,7 +64,7 @@ if __name__ == "__main__":
             client_socket.send(message.encode('utf-8'))
 
     except KeyboardInterrupt:
-        print("Client exiting...")
+        logging.exception("Client exiting...")
 
     finally:
         # Ensure both threads exit cleanly

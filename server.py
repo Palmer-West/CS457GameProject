@@ -2,6 +2,14 @@ import socket
 import threading
 import queue
 import pydealer
+import logging
+
+logging.basicConfig(
+    filename="server.log",
+    filemode="w",
+    level=logging.DEBUG,
+    format="| %(asctime)s | %(levelname)s | %(message)s |"
+)
 
 # Define the host and port to listen on
 HOST = '127.0.0.1'
@@ -22,46 +30,46 @@ def game_setup():
     # TODO: handle uneven hand sizes, say for 3 clients
     if 52 % len(clients) == 0:
         handSize = int(52 / len(clients))
-        print(f"Hand size: {handSize}")
+        logging.info(f"Calculated hand size: {handSize}")
     for i in range(len(clients)):
         playerHands.append(deck.deal(handSize))
         messageOut_queue.put(f"Hand: {clients[i]}:{playerHands[i]}")
-        print(f"Hands of size {handSize} delt to {len(clients)} players")
+        logging.info(f"Hands of size {handSize} delt to {len(clients)} players")
     
 
 # Placeholder game logic (can be replaced with a card game implementation)
 def game_thread():
-    print("Game thread started.")
+    logging.info("Game thread started.")
     while True:
         if not messageIn_queue.empty():
             message = messageIn_queue.get()
             if message == "shutdown":
-                print("Game thread shutting down.")
+                logging.info("Game thread shutting down.")
                 break
             elif "New client:" in message:
                 #numClients += 1
                 clients.append(message[11:])
                 
             elif message == "start":
-                print("Game setup started...")
+                logging.info("Game setup started...")
                 game_setup()
                 
 
-            print(f"Game processing message: {message}")
+            logging.info(f"Game processing message: {message}")
             response = f"Processed: {message}"
             messageOut_queue.put(response)
 
 # Handle individual client connections
 def handle_client(client_socket, client_address):
-    print(f"Client {client_address} connected.")
+    logging.info(f"Client {client_address} connected.")
     messageIn_queue.put(f"New client: {client_address}")
     try:
         while True:
             message = client_socket.recv(1024).decode('utf-8')
             if not message or message.lower() == 'quit':
-                print(f"Client {client_address} disconnected.")
+                logging.info(f"Client {client_address} disconnected.")
                 break
-            print(f"Received from {client_address}: {message}")
+            logging.info(f"Received from {client_address}: {message}")
             messageIn_queue.put(message)
 
             # Get the game response and send it back to the client
@@ -70,7 +78,7 @@ def handle_client(client_socket, client_address):
                 client_socket.send(response.encode('utf-8'))
 
     except ConnectionResetError:
-        print(f"Connection with {client_address} was lost.")
+        logging.exception(f"Connection with {client_address} was lost.")
     finally:
         client_socket.close()
 
@@ -79,7 +87,7 @@ def server_thread():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((HOST, PORT))
     server_socket.listen(5)  # Allow up to 5 connections
-    print(f"Server listening on {HOST}:{PORT}")
+    logging.info(f"Server listening on {HOST}:{PORT}")
 
     client_threads = []
 
@@ -90,7 +98,7 @@ def server_thread():
             client_threads.append(client_handler)
             client_handler.start()
     except KeyboardInterrupt:
-        print("Server shutting down.")
+        logging.exception("Server shutting down.")
     finally:
         # Shut down all client connections gracefully
         for client_thread in client_threads:
@@ -109,5 +117,5 @@ if __name__ == "__main__":
         server.join()
         game.join()
     except KeyboardInterrupt:
-        print("Server and game threads shutting down.")
+        logging.exception("Server and game threads shutting down.")
         messageIn_queue.put("shutdown")
