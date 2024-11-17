@@ -36,6 +36,7 @@ turn_button.pack(pady=5)
 
 slap_button = tk.Button(gui, text="Slap Deck", command=lambda: slap_deck())
 slap_button.pack(pady=5)
+slap_button.config(state=tk.NORMAL)
 
 shutdown_event = threading.Event()
 player_turn = False
@@ -62,12 +63,21 @@ def receive_messages():
                 player_turn = False
                 turn_button.config(state=tk.DISABLED) 
                 logging.info("Player turn set to False")
+            elif "Player" in message and "made a valid slap" in message:
+                text_area.config(state=tk.NORMAL)
+                text_area.insert(tk.END, message + '\n')
+                text_area.config(state=tk.DISABLED)
+                text_area.yview(tk.END)
             elif "shutdown" in message:
                 shutdown_event.set()
                 gui.quit()
         except (ConnectionResetError, OSError):
             logging.error("Connection lost.")
             break
+
+def slap_deck():
+    client_socket.send("slap deck".encode('utf-8'))
+    logging.info("Deck slapped message sent to server.")
 
 def announce_turn():
     global player_turn
@@ -82,10 +92,6 @@ def announce_turn():
         text_area.config(state=tk.DISABLED)
         text_area.yview(tk.END)
         logging.info("Player attempted to take turn out of sequence.")
-
-def slap_deck():
-    client_socet.send("Deck Slapped".encode('utf-8'))
-    logging.info("Deck slapped message sent to server.")
 
 
 def on_close():

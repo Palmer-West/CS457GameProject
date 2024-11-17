@@ -1,8 +1,591 @@
-| 2024-11-17 10:20:35,723 | INFO | Connected to the server. |
-| 2024-11-17 10:20:35,777 | INFO | Received: You are Player 2. Game is starting...Game starting. You go first. Your turn |
-| 2024-11-17 10:20:35,879 | INFO | Player turn set to True |
-| 2024-11-17 10:20:40,608 | INFO | Turn taken| 2024-11-17 10:20:40,608 || 2024-11-17 10:20:40,608 | INFO | Received: | 2024-11-17 10:20:40,609 || 2024-11-17 10:20:40,609 | INF| 2024-11-17 10:20:40,612 | INFO | Player turn set to True |
-| 2024-11-17 10:20:43,559 | INFO | Tu| 2024-11-17 10:20:43,559 | INFO | Received: Pile: ['Queen of Clubs', 'Queen of Spades'] |
-| 2024-11-17 10:20:43,560 | INFO | | 2024-11-17 10:20:43,5| 2024-11-17 10:20:43,563 | INFO | Player tu| 2024-11-17 10:2| 2024-11-17 10:20:46,071 | INFO | Received: shutdown |
-| 2024-11-17 10:20:46,075 | INFO | Client socket closed. |
-| 2024-11-17 10:20:46,070 | INFO | Client socket closed. |
+| 2024-11-17 12:13:09,095 | INFO | Connected to the server. |
+| 2024-11-17 12:13:09,150 | INFO | Received: You are Player 2. Game is starting...Game starting. Wait for your turn. |
+| 2024-11-17 12:13:09,155 | INFO | Player turn set to False |
+| 2024-11-17 12:13:13,409 | INFO | Received: Pile: ['Jack of Diamonds'] |
+| 2024-11-17 12:13:13,411 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Jack of Diamonds', 'Queen of Clubs']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:13:13,415 | INFO | Player turn set to True |
+| 2024-11-17 12:13:23,105 | INFO | Turn taken message sent to s| 2024-11| 2024-11-17 12:13:23,107 | INFO | Received: Pile: ['Ace of C| 2024-11-17 12:13:23,110 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Ace of Clubs', '2 of Diamonds']Your turn to play a card due to face card rule.Pile: ['Ace of Clubs', '2 of Diamonds', 'King of| 2024-11-17 12:13:23,116 | INFO | Received: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs', 'King of Spades', '10 of Diamonds']Player 2 takes the pile after face card ro| 2024-| 2024-11-17 12:13:27,370 | INFO | Received: Pile: ['7 of Spades'] |
+| 2024-11-17 12:13:27,372 | INFO | Received: Your turn. |
+| 2024-11-17 12:13:27,384 | INFO | Player turn set to True |
+| 2024-11-17 12:13:30,296 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:30,298 | INFO | Received: Pile: ['7 of Spades', 'King of Hearts'] |
+| 2024-11-17 12:13:30,301 | INFO | Received: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs']Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs', '5 of Spades']Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs', '5 of Spades', '10 of Clubs']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:13:32,611 | INFO | Received: Pile: ['6 of Hearts'] |
+| 2024-11-17 12:13:32,615 | INFO | Received: Your turn. |
+| 2024-11-17 12:13:32,622 | INFO | Player turn set to True |
+| 2024-11-17 12:13:33,743 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:33,744 | INFO | Received: Pile: ['6 of Hearts', '2 of Clubs'] |
+| 2024-11-17 12:13:33,745 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:13:33,755 | INFO | Player turn set to False |
+| 2024-11-17 12:13:35,174 | INFO | Received: Pile: ['6 of Hearts', '2 of Clubs', 'Jack of Clubs'] |
+| 2024-11-17 12:13:35,176 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['6 of Hearts', '2 of Clubs', 'Jack of Clubs', 'Queen of Hearts']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:13:35,188 | INFO | Player turn set to True |
+| 2024-11-17 12:13:39,231 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:39,232 | INFO | Received: Pile: ['8 of Clubs'] |
+| 2024-11-17 12:13:39,233 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:13:39,239 | INFO | Player turn set to False |
+| 2024-11-17 12:13:40,628 | INFO | Received: Pile: ['8 of Clubs', '7 of Diamonds'] |
+| 2024-11-17 12:13:40,630 | INFO | Received: Your turn. |
+| 2024-11-17 12:13:40,632 | INFO | Player turn set to True |
+| 2024-11-17 12:13:42,279 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:42,280 | INFO | Received: Pile: ['8 of Clubs', '7 of Diamonds', '2 of Hearts'] |
+| 2024-11-17 12:13:42,285 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:13:42,289 | INFO | Player turn set to False |
+| 2024-11-17 12:13:43,945 | INFO | Received: Pile: ['8 of Clubs', '7 of Diamonds', '2 of Hearts', '7 of Clubs'] |
+| 2024-11-17 12:13:43,952 | INFO | Received: Your turn. |
+| 2024-11-17 12:13:43,964 | INFO | Player turn set to True |
+| 2024-11-17 12:13:46,350 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 12:13:46,352 | INFO | Received: Player 1 made a valid slap and took the pile. |
+| 2024-11-17 12:13:49,482 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:49,483 | INFO | Received: Pile: ['4 of Hearts'] |
+| 2024-11-17 12:13:49,490 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:13:49,501 | INFO | Player turn set to False |
+| 2024-11-17 12:13:50,929 | INFO | Received: Pile: ['4 of Hearts', '8 of Spades'] |
+| 2024-11-17 12:13:50,930 | INFO | Received: Your turn. |
+| 2024-11-17 12:13:50,944 | INFO | Player turn set to True |
+| 2024-11-17 12:13:52,344 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:52,352 | INFO | Received: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds'] |
+| 2024-11-17 12:13:52,352 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:13:52,355 | INFO | Player turn set to False |
+| 2024-11-17 12:13:53,784 | INFO | Received: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds', 'Jack of Hearts'] |
+| 2024-11-17 12:13:53,787 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds', 'Jack of Hearts', '3 of Spades']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:13:53,789 | INFO | Player turn set to True |
+| 2024-11-17 12:13:55,826 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:55,827 | INFO | Received: Pile: ['5 of Diamonds'] |
+| 2024-11-17 12:13:55,832 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:13:55,845 | INFO | Player turn set to False |
+| 2024-11-17 12:13:56,966 | INFO | Received: Pile: ['5 of Diamonds', 'Jack of Spades'] |
+| 2024-11-17 12:13:56,967 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['5 of Diamonds', 'Jack of Spades', '3 of Clubs']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:13:56,970 | INFO | Player turn set to True |
+| 2024-11-17 12:13:58,858 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:13:58,859 | INFO | Received: Pile: ['King of Diamonds'] |
+| 2024-11-17 12:13:58,861 | INFO | Received: Pile: ['King of Diamonds', '6 of Spades']Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts']Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:14:00,869 | INFO | Received: Pile: ['Ace of Hearts'] |
+| 2024-11-17 12:14:00,871 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Ace of Hearts', '9 of Diamonds']Your turn to play a card due to face card rule.Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds']Your turn to play a card due to face card rule.Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds', '2 of Spades'] |
+| 2024-11-17 12:14:00,879 | INFO | Player turn set to True |
+| 2024-11-17 12:14:00,879 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds', '2 of Spades', '8 of Diamonds']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:14:00,888 | INFO | Player turn set to True |
+| 2024-11-17 12:14:02,783 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:02,784 | INFO | Received: Pile: ['10 of Spades'] |
+| 2024-11-17 12:14:02,792 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:02,806 | INFO | Player turn set to False |
+| 2024-11-17 12:14:04,442 | INFO | Received: Pile: ['10 of Spades', '9 of Hearts'] |
+| 2024-11-17 12:14:04,445 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:04,455 | INFO | Player turn set to True |
+| 2024-11-17 12:14:05,674 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:05,675 | INFO | Received: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs'] |
+| 2024-11-17 12:14:05,677 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:05,688 | INFO | Player turn set to False |
+| 2024-11-17 12:14:16,830 | INFO | Received: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs', '6 of Clubs'] |
+| 2024-11-17 12:14:16,832 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:16,843 | INFO | Player turn set to True |
+| 2024-11-17 12:14:18,808 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:18,808 | INFO | Received: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs', '6 of Clubs', '5 of Hearts'] |
+| 2024-11-17 12:14:18,810 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:18,814 | INFO | Player turn set to False |
+| 2024-11-17 12:14:21,941 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 12:14:21,946 | INFO | Received: Player 1 made a valid slap and took the pile. |
+| 2024-11-17 12:14:23,893 | INFO | Received: Pile: ['9 of Clubs'] |
+| 2024-11-17 12:14:23,895 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:23,905 | INFO | Player turn set to True |
+| 2024-11-17 12:14:25,202 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:25,203 | INFO | Received: Pile: ['9 of Clubs', '6 of Diamonds'] |
+| 2024-11-17 12:14:25,204 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:25,216 | INFO | Player turn set to False |
+| 2024-11-17 12:14:26,741 | INFO | Received: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds'] |
+| 2024-11-17 12:14:26,744 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds', '9 of Spades']Your turn to play a card due to face card rule.Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds', '9 of Spad| 2024-11-17 12:14:26,747 | INFO | Received: Pile: ['9 of Clubs', '6 | 2024-11-17 12:14:26,751 | INFO | Player turn set to True |
+| 2024-11-17 12:14:29,038 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:29,039 | INFO | Received: Pile: ['7 of Hearts'] |
+| 2024-11-17 12:14:29,042 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:29,045 | INFO | Player turn set to False |
+| 2024-11-17 12:14:30,492 | INFO | Received: Pile: ['7 of Hearts', '4 of Spades'] |
+| 2024-11-17 12:14:30,494 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:30,506 | INFO | Player turn set to True |
+| 2024-11-17 12:14:31,858 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:31,860 | INFO | Received: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades'] |
+| 2024-11-17 12:14:31,862 | INFO | Received: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades', 'Ace of Spades'] |
+| 2024-11-17 12:14:31,870 | INFO | Received: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds']Player 2 ta| 2024-11-17 12:14:31,871 | INFO | Pla| 2024-11-17 12:14:33,176 | INFO | Received: Pile: ['Queen of Clubs'] |
+| 2024-11-17 12:14:33,182 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Queen of Clubs', '3 of Hearts']Your turn to play a card due to face card rule.Pile: ['Queen of Clubs', '3 of Hearts', 'Ace of Clubs']Player 1 takes the pile after face card round. ||| 2024-11-17 12:14:33,198 | INFO | Player turn set to True |
+| 2024-11-17 12:14:34,400 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:34,400 | INFO | Received: Pile: ['2 of Diamonds'] |
+| 2024-11-17 12:14:34,401 | INFO | Received: Wait for | 2024-11-17 12:14:34,404 | INFO | Received: Your turn. |
+| 2024-11-17 12:1| 2024-11-17 12:14:35,483 | INFO | Received: Pile: ['2 of Diamonds', '6 of Hearts'] |
+| 2024-11-17 12:14:35,484 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:35,496 | INFO | Player turn set to True |
+| 2024-11-17 12:14:36,507 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:36,509 | INFO | Received: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs'] |
+| 2024-11-17 12:14:36,513 | INFO | Received: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs']Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs', 'Jack of Clubs']Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs', 'Jack of Clubs', 'Queen of Hearts']Player 2 takes the pile after face card round.| 2| 2024-11-17 12:14:37,591 | INFO | Received: Pile: ['8 of Clubs'] |
+| 2024-11-17 12:14:37,593 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:37,600 | INFO | Player turn set to True |
+| 2024-11-17 12:14:38,764 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:38,765 | INFO | Received: Pile: ['8 of Clubs', 'King of Spades'] |
+| 2024-11-17 12:14:38,771 | INFO | Received: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds']Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds', '2 of Hearts']Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds', '2 of Hearts', '7 of Clubs']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:14:40,481 | INFO | Received: Pile: ['4 of Hearts'] |
+| 2024-11-17 12:14:40,483 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:40,489 | INFO | Player turn set to True |
+| 2024-11-17 12:14:41,413 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:41,414 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds'] |
+| 2024-11-17 12:14:41,423 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:41,434 | INFO | Player turn set to False |
+| 2024-11-17 12:14:42,410 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades'] |
+| 2024-11-17 12:14:42,413 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:42,419 | INFO | Player turn set to True |
+| 2024-11-17 12:14:43,946 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:43,947 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades'] |
+| 2024-11-17 12:14:43,949 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:43,957 | INFO | Player turn set to False |
+| 2024-11-17 12:14:45,031 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds'] |
+| 2024-11-17 12:14:45,032 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:45,042 | INFO | Player turn set to True |
+| 2024-11-17 12:14:46,793 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:46,794 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts'] |
+| 2024-11-17 12:14:46,796 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts']Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts', '3 of Spades'] |
+| 2024-11-17 12:14:46,808 | INFO | Received: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts', '3 of Spades', '5 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:14:48,211 | INFO | Received: Pile: ['Jack of Spades'] |
+| 2024-11-17 12:14:48,213 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Jack of Spades', '4 of Clubs']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:14:48,219 | INFO | Player turn set to True |
+| 2024-11-17 12:14:50,588 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:50,590 | INFO | Received: Pile: ['5 of Spades'] |
+| 2024-11-17 12:14:50,592 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:50,597 | INFO | Player turn set to False |
+| 2024-11-17 12:14:51,614 | INFO | Received: Pile: ['5 of Spades', '3 of Clubs'] |
+| 2024-11-17 12:14:51,614 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:51,618 | INFO | Player turn set to True |
+| 2024-11-17 12:14:52,831 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:52,832 | INFO | Received: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs'] |
+| 2024-11-17 12:14:52,835 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:52,840 | INFO | Player turn set to False |
+| 2024-11-17 12:14:54,242 | INFO | Received: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts'] |
+| 2024-11-17 12:14:54,245 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds']Your turn to play a card due to face card rule.Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades']Your turn to play a card due to face card rule.Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades', '8 of Hearts']Your turn to play a card due to face card rule.Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds']Player 1 takes the pil| 2024-11-17 12:14:54,254 | INFO | Received: Pile: ['5 of Spades', '3 of Clubs', '10 of | 2024-11-17 12:14:57,580 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:14:57,581 | INFO | Received: Pile: ['7 of Hearts'] |
+| 2024-11-17 12:14:57,587 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:14:57,593 | INFO | Player turn set to False |
+| 2024-11-17 12:14:59,288 | INFO | Received: Pile: ['7 of Hearts', '9 of Diamonds'] |
+| 2024-11-17 12:14:59,290 | INFO | Received: Your turn. |
+| 2024-11-17 12:14:59,298 | INFO | Player turn set to True |
+| 2024-11-17 12:15:00,604 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:00,606 | INFO | Received: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades'] |
+| 2024-11-17 12:15:00,610 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:00,617 | INFO | Player turn set to False |
+| 2024-11-17 12:15:12,402 | INFO | Received: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds'] |
+| 2024-11-17 12:15:12,407 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades']Your turn to play a card due to face card rule.Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades']Your turn to play a card due to face card rule.Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades| 2024-11-17 12:15:12,408 | INFO | Received: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades']Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades']Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', '| 2024-11-17 12:15:12,412 | INFO | Player turn set to True |
+| 2024-11-17 12:15:13,704 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:13,705 | INFO | Received: Pile: ['6 of Hearts'] |
+| 2024-11-17 12:15:13,708 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:13,710 | INFO | Player turn s| 2024-11-17 1| 2024-11-17 12:15:14,972 | INFO | Received: Pile: ['6 of Hearts', '2 of Spades'] |
+| 2024-11-17 12:15:14,974 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:14,984 | INFO | Player turn set to True |
+| 2024-11-17 12:15:15,960 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:15,961 | INFO | Received: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs'] |
+| 2024-11-17 12:15:15,963 | INFO | Received: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds']| 2024-11-17 12:15:15,968 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds']Your turn to play a card due to face card rule.Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds', '10 | 2024-11-17 12:15:16,810 | INFO | Received: Pile: ['5 of Clubs'] |
+| 2024-11-17 12:15:16,813 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:16,829 | INFO | Player turn set to True |
+| 2024-11-17 12:15:17,825 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:17,826 | INFO | Received: Pile: ['5 of Clubs', '2 of Clubs'] |
+| 2024-11-17 12:15:17,826 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:17,830 | INFO | Player turn set to False |
+| 2024-11-17 12:15:18,801 | INFO | Received: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs'] |
+| 2024-11-17 12:15:18,803 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:18,806 | INFO | Player turn set to True |
+| 2024-11-17 12:15:19,989 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:19,990 | INFO | Received: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
+| 2024-11-17 12:15:19,996 | INFO | Received: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs', '5 of Hearts']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:15:21,429 | INFO | Received: Pile: ['9 of Clubs'] |
+| 2024-11-17 12:15:21,431 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:21,440 | INFO | Player turn set to True |
+| 2024-11-17 12:15:22,482 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:22,483 | INFO | Received: Pile: ['9 of Clubs', 'Queen of Hearts'] |
+| 2024-11-17 12:15:22,488 | INFO | Received: Pile: ['9 of Clubs', 'Queen of Hearts', '6 of Diamonds']Pile: ['9 of Clubs', 'Queen of Hearts', '6 of Diamonds', 'Queen of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:15:24,185 | INFO | Received: Pile: ['9 of Spades'] |
+| 2024-11-17 12:15:24,192 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:24,201 | INFO | Player turn set to True |
+| 2024-11-17 12:15:25,251 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:25,252 | INFO | Received: Pile: ['9 of Spades', '8 of Clubs'] |
+| 2024-11-17 12:15:25,258 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:25,264 | INFO | Player turn set to False |
+| 2024-11-17 12:15:26,447 | INFO | Received: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts'] |
+| 2024-11-17 12:15:26,448 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:26,451 | INFO | Player turn set to True |
+| 2024-11-17 12:15:28,490 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:28,491 | INFO | Received: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades'] |
+| 2024-11-17 12:15:28,497 | INFO | Received: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs']Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs', '3 of Hearts']Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs', '3 of Hearts', 'Ace of Clubs']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:15:29,665 | INFO | Received: Pile: ['Jack of Spades'] |
+| 2024-11-17 12:15:29,666 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Jack of Spades', '7 of Diamonds']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:15:29,676 | INFO | Player turn set to True |
+| 2024-11-17 12:15:39,190 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:39,191 | INFO | Received: Pile: ['2 of Hearts'] |
+| 2024-11-17 12:15:39,204 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:39,213 | INFO | Player turn set to False |
+| 2024-11-17 12:15:40,772 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs'] |
+| 2024-11-17 12:15:40,775 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:40,779 | INFO | Player turn set to True |
+| 2024-11-17 12:15:41,889 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:41,890 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs'] |
+| 2024-11-17 12:15:41,895 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:41,903 | INFO | Player turn set to False |
+| 2024-11-17 12:15:43,249 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades'] |
+| 2024-11-17 12:15:43,251 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:43,260 | INFO | Player turn set to True |
+| 2024-11-17 12:15:44,430 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:44,430 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts'] |
+| 2024-11-17 12:15:44,432 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:44,434 | INFO | Player turn set to False |
+| 2024-11-17 12:15:45,513 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs'] |
+| 2024-11-17 12:15:45,517 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:45,521 | INFO | Player turn set to True |
+| 2024-11-17 12:15:46,666 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:46,667 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds'] |
+| 2024-11-17 12:15:46,672 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:46,674 | INFO | Player turn set to False |
+| 2024-11-17 12:15:48,317 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs'] |
+| 2024-11-17 12:15:48,318 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:48,322 | INFO | Player turn set to True |
+| 2024-11-17 12:15:49,335 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:49,335 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades'] |
+| 2024-11-17 12:15:49,337 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:49,344 | INFO | Player turn set to False |
+| 2024-11-17 12:15:52,034 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts'] |
+| 2024-11-17 12:15:52,036 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades']Your turn to play a card due to face card rule. |
+| 2024-11-17 12:15:52,041 | INFO | Player turn set to True |
+| 2024-11-17 12:15:52,042 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds']Your turn to play a card due to face card rule.Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spad| 2024-11-17 12:15:52,042 | INFO | Received: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades']Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', '| 2024-11-17 12:15:52,054 | INFO | Player turn set to True |
+| 2024-11-17 12:15:53,571 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:53,572 | INFO | Received: Pile: ['3 of Spades'] |
+| 2024-11-17 12:15:53,577 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:15:53,586 | INFO | Player turn set to False |
+| 2024-11-17 12:15:54,697 | INFO | Received: Pile: ['3 of Spades', 'King of Diamonds'] |
+| 2024-11-17 12:15:54,699 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds']Your turn to play a card due to face card rule.Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds', '6 of Hearts']Your turn to play a card due to face card rule. |
+| 2024-11-17 12:15:54,708 | INFO | Player turn set to True |
+| 2024-11-17 12:15:54,708 | INFO | Received: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds', '6 of Hearts', '2 of Spades']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:15:57,514 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:15:57,515 | INFO | Received: Pile: ['King of Clubs'] |
+| 2024-11-17 12:15:57,517 | INFO | Received: Pile: ['King of Clubs', '6 of Spades']Pile: ['King of Clubs', '6 of Spades', '8 of Hearts']Pile: ['King of Clubs', '6 of Spades', '8 of Hearts', '4 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:15:59,018 | INFO | Received: Pile: ['7 of Hearts'] |
+| 2024-11-17 12:15:59,028 | INFO | Received: Your turn. |
+| 2024-11-17 12:15:59,039 | INFO | Player turn set to True |
+| 2024-11-17 12:16:00,178 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:00,178 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds'] |
+| 2024-11-17 12:16:00,184 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:00,195 | INFO | Player turn set to False |
+| 2024-11-17 12:16:01,297 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds'] |
+| 2024-11-17 12:16:01,304 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:01,309 | INFO | Player turn set to True |
+| 2024-11-17 12:16:03,317 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:03,326 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades'] |
+| 2024-11-17 12:16:03,334 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:03,336 | INFO | Player turn set to False |
+| 2024-11-17 12:16:05,106 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades'] |
+| 2024-11-17 12:16:05,108 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:05,119 | INFO | Player turn set to True |
+| 2024-11-17 12:16:06,522 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:06,523 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts'] |
+| 2024-11-17 12:16:06,525 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:06,540 | INFO | Player turn set to False |
+| 2024-11-17 12:16:08,544 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds'] |
+| 2024-11-17 12:16:08,552 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs']Your turn to play a card due to face card rule.Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 | 2024-11-17 12:16:08,559 | INFO | Received: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs']Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs']Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs', '6 of Clubs']Pile:| 2024-11-17 12:16:08,559 | INFO | Player turn set to True |
+| 2024-11-17 12:16:09,833 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:09,833 | INFO | Received: Pile: ['5 of Hearts'] |
+| 2024-11-17 12:16:09,834 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:09,836 | INFO | Player turn set to False |
+| 2024-11-17 12:16:10,908 | INFO | Received: Pile: ['5 of Hearts', 'Queen of Spades'] |
+| 2024-11-17 12:16:10,916 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['5 of Hearts', 'Queen of Spades', '9 of Clubs']Your turn to play a card due to face card rule.Pile: ['5 of Hearts', 'Queen of Spades', '9 of Clubs', 'Queen of Hearts']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:10,924 | INFO | Player turn set to True| 2024-11-17 12:16:12,324 | INFO | Received: Pile: ['6 of Diamonds'] |
+| 2024-11-17 12:16:12,327 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:12,334 | INFO | Player turn set to True |
+| 2024-11-17 12:16:13,377 | INFO | Turn taken message sent to server. |
+| 2024-11-17 | 2024-11-17 12:16:13,378 | INFO | Received: Pile: ['6 of Diamonds', 'Ace o| 2024-11-17 12:16:13,386 | INFO | Received: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds']Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades']Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades', '8 of Clubs']Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades', '8 of Clubs', '10 of Hearts']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:14,430 | INFO | Received: Pile: ['King of Spades'] |
+| 2024-11-17 12:16:14,442 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['King of Spades', 'Jack of Diamonds']Your turn to play a card due to face card rule.Pile: ['King of Spades', 'Jack of Diamonds', '2 of Diamonds']Your turn to play a card due to face card rule.Pile: ['King of Spades', 'Jack of Diamonds', '2 of Diamonds', 'Jack of Spades']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:14,445 | INFO | Player turn set to True |
+| 2024-11-17 12:16:15,519 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:15,519 | INFO | Received: Pile: ['7 of Di| 2024-11-1| 2024-11-17 12:16:15,519 | INFO | Received: Wait for your t| 2024-| 2024-11-17 12:16:15,524 | INFO | Player turn set | 2024-11-1| 2024-11-17 12:16:16,760 | INFO | Received: Pile: ['7 of Diamonds', 'Queen of Clubs'] |
+| 2024-11-17 12:16:16,765 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['7 of Diamonds', 'Queen| 2024-11-17 12:16:16,769 | INFO | Received: Pile: ['7 of Diamonds', 'Queen of Clubs', '2 of Hearts']Pile: ['7 of Diamonds', 'Queen of Clubs', '2 of Hearts', '4 of Clubs']Player 2 takes the pi| 2024-11-17 12:16:16,770 | | 2024-11-17 12:16:18,046 | INFO | Received: Pile: ['7 of Clubs'] |
+| 2024-11-17 12:16:18,049 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:18,053 | INFO | Player turn set to True |
+| 2024-11-17 12:16:19,426 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:19,427 | INFO | Received: Pile: ['7 of Clubs', '3 of Hearts'] |
+| 2024-11-17 12:16:19,429 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:19,430 | INFO || 2024-11-17 12:16:19,431 | | 2024-11-17 12:16:20,788 | INFO | Received: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades'] |
+| 2024-11-17 12:16:20,789 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:20,790 | INFO | Player turn set to True |
+| 2024-11-17 12:16:22,275 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:22,276 | INFO | Received: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs'] |
+| 2024-11-17 12:16:22,279 | INFO | Received| 2024-11-17 12:16:22,280 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts']Your turn to play a card due to face card rule.Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs']Your turn to play a card due to face card rule.Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs', '10 of Dia| 2024-11-17 12:16:23,878 | INFO | Received: Pile: ['8 of Spades'] |
+| 2024-11-17 12:16:23,879 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:23,883 | INFO | Player turn set to True |
+| 2024-11-17 12:16:24,980 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:24,981 | INFO | Received: Pile: ['8 of Spades', 'King of Clubs'] |
+| 2024-11-17 12:16:24,986 | INFO | Received: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts']Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts', '7 of Spades']Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts', '7 of Spades', '3 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:26,326 | INFO | Received: Pile: ['King of Hearts'] |
+| 2024-11-17 12:16:26,328 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['King of Hearts', '6 of Spades']Your turn to play a card due to face card rule. |
+| 2024-11-17 12:16:26,333 | INFO | Player turn set to True |
+| 2024-11-17 12:16:26,333 | INFO | Received: Pile: ['King of Hearts', '6 of Spades', '8 of Hearts']Your turn to play a card due to face card rule.Pile: ['King of Hearts', '6 of Spades', '8 of Hearts', '4 of Diamonds']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:26,335 | INFO | Player turn set to True |
+| 2024-11-17 12:16:27,245 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:27,246 | INFO | Received: Pile: ['King of Spades'] |
+| 2024-11-17 12:16:27,252 | INFO | Received: Pile: ['King of Spades', 'Jack of Hearts']Pile: ['King of Spades', 'Jack of Hearts', '3 of Spades']Pile: ['King of Spades', 'Jack of Hearts', '3 of Spades', 'King of Diamonds']Player 2 takes the p| 2024-11-17 12:16:27,252 | I| 2024-11-17 12:16:27,951 | INFO | Received: Pile: ['5 of Diamonds'] |
+| 2024-11-17 12:16:27,954 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:27,964 | INFO | Player turn set to True |
+| 2024-11-17 12:16:29,835 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:29,836 | INFO | Received: Pile: ['5 of Diamonds', 'Jack of Diamonds'] |
+| 2024-11-17 12:16:29,847 | INFO | Received: Pile: ['5 of Diamonds', 'Jack of Diamonds', '6 of Hearts']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:31,415 | INFO | Received: Pile: ['2 of Spades'] |
+| 2024-11-17 12:16:31,423 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:31,427 | INFO | Player turn set to True |
+| 2024-11-17 12:16:32,170 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:32,170 | INFO | Received: Pile: ['2 of Spades', '2 of Diamonds'] |
+| 2024-11-17 12:16:32,173 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:32,175 | INFO | Player turn set to False |
+| 2024-11-17 12:16:33,259 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 12:16:33,262 | INFO | Received: Player 1 made a valid slap and took the pile. |
+| 2024-11-17 12:16:35,694 | INFO | Received: Pile: ['7 of Hearts'] |
+| 2024-11-17 12:16:35,696 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:35,705 | INFO | Player turn set to True |
+| 2024-11-17 12:16:37,287 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:37,295 | INFO | Received: Pile: ['7 of Hearts', 'Jack of Spades'] |
+| 2024-11-17 12:16:37,295 | INFO | Received: Pile: ['7 of Hearts', 'Jack of Spades', '8 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:38,249 | INFO | Received: Pile: ['9 of Diamonds'] |
+| 2024-11-17 12:16:38,250 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:38,253 | INFO | Player turn set to True |
+| 2024-11-17 12:16:39,495 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:39,496 | INFO | Received: Pile: ['9 of Diamonds', '7 of Diamonds'] |
+| 2024-11-17 12:16:39,496 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:39,499 | INFO | Player turn set to False |
+| 2024-11-17 12:16:40,663 | INFO | Received: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades'] |
+| 2024-11-17 12:16:40,666 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:40,680 | INFO | Player turn set to True |
+| 2024-11-17 12:16:41,423 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:41,424 | INFO | Received: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs'] |
+| 2024-11-17 12:16:41,424 | INFO | Received: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs', '4 of Spades']Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs', '4 of Spades', '9 of Hearts'] |
+| 2024-11-17 12:16:41,426 | INFO | Received: Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:42,726 | INFO | Received: Pile: ['Ace of Diamonds'] |
+| 2024-11-17 12:16:42,735 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Ace of Diamonds', '2 of Hearts']Your turn to play a card due to face card rule.Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs']Your turn to play a card due to face card rule.Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs', '7 of Clubs']Your turn to play a card due to face card rule.Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs', '7 of Clubs', '3 of Hearts']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:42,737 | INFO | Player turn set to True |
+| 2024-11-17 12:16:43,751 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:43,751 | INFO | Received: Pile: ['5 of Spades'] |
+| 2024-11-17 12:16:43,753 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:43,754 | INFO | Player turn set to False |
+| 2024-11-17 12:16:44,621 | INFO | Received: Pile: ['5 of Spades', '5 of Clubs'] |
+| 2024-11-17 12:16:44,621 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:44,625 | INFO | Player turn set to True |
+| 2024-11-17 12:16:45,789 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 12:16:45,795 | INFO | Received: Player 1 made a valid slap and took the pile. |
+| 2024-11-17 12:16:48,058 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:48,059 | INFO | Received: Pile: ['Ace of Clubs'] |
+| 2024-11-17 12:16:48,066 | INFO | Received: Pile: ['Ace of Clubs', '2 of Clubs']Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs']Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs']Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs', '5 of Hearts']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:49,603 | INFO | Received: Pile: ['Queen of Spades'] |
+| 2024-11-17 12:16:49,603 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['Queen of Spades', '4 of Hearts']Your turn to play a card due to face card rule.Pile: ['Queen of Spades', '4 of Hearts', '3 of Clubs']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:49,608 | INFO | Player turn set to True |
+| 2024-11-17 12:16:50,508 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:50,509 | INFO | Received: Pile: ['10 of Diamonds'] |
+| 2024-11-17 12:16:50,510 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:50,517 | INFO | Player turn set to False |
+| 2024-11-17 12:16:51,347 | INFO | Received: Pile: ['10 of Diamonds', '9 of Clubs'] |
+| 2024-11-17 12:16:51,347 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:51,351 | INFO | Player turn set to True |
+| 2024-11-17 12:16:52,165 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:52,165 | INFO | Received: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs'] |
+| 2024-11-17 12:16:52,166 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:52,169 | INFO | Player turn set to False |
+| 2024-11-17 12:16:53,026 | INFO | Received: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts'] |
+| 2024-11-17 12:16:53,027 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts', '8 of Spades']Your turn to play a card due to face card rule.Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:53,031 | INFO | Player turn set to True |
+| 2024-11-17 12:16:53,959 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:53,959 | INFO | Received: Pile: ['Ace of Hearts'] |
+| 2024-11-17 12:16:53,959 | INFO | Received: Pile: ['Ace of Hearts', '6 of Diamonds']Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades'] |
+| 2024-11-17 12:16:53,962 | INFO | Received: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds']Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:54,707 | INFO | Received: Pile: ['8 of Clubs']Your turn. |
+| 2024-11-17 12:16:54,709 | INFO | Player turn set to True |
+| 2024-11-17 12:16:55,582 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:55,582 | INFO | Received: Pile: ['8 of Clubs', '7 of Spades'] |
+| 2024-11-17 12:16:55,582 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:55,585 | INFO | Player turn set to False |
+| 2024-11-17 12:16:56,345 | INFO | Received: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts']Your turn. |
+| 2024-11-17 12:16:56,348 | INFO | Player turn set to True |
+| 2024-11-17 12:16:56,985 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:56,985 | INFO | Received: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds'] |
+| 2024-11-17 12:16:56,986 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:56,989 | INFO | Player turn set to False |
+| 2024-11-17 12:16:57,535 | INFO | Received: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts'] |
+| 2024-11-17 12:16:57,543 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades']Your turn to play a card due to face card rule.Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades', 'Jack of Hearts']Your turn to play a card due to face card rule.Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades', 'Jack of Hearts', '3 of Spades']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:16:57,557 | INFO | Player turn set to True |
+| 2024-11-17 12:16:58,606 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:58,607 | INFO | Received: Pile: ['King of Diamonds'] |
+| 2024-11-17 12:16:58,608 | INFO | Received: Pile: ['King of Diamonds', '6 of Spades']Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts']Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:16:59,205 | INFO | Received: Pile: ['2 of Spades'] |
+| 2024-11-17 12:16:59,205 | INFO | Received: Your turn. |
+| 2024-11-17 12:16:59,208 | INFO | Player turn set to True |
+| 2024-11-17 12:16:59,939 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:16:59,939 | INFO | Received: Pile: ['2 of Spades', '5 of Diamonds'] |
+| 2024-11-17 12:16:59,940 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:16:59,942 | INFO | Player turn set to False |
+| 2024-11-17 12:17:00,685 | INFO | Received: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds'] |
+| 2024-11-17 12:17:00,688 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:00,691 | INFO | Player turn set to True |
+| 2024-11-17 12:17:02,451 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:02,451 | INFO | Received: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds', 'Jack of Diamonds'] |
+| 2024-11-17 12:17:02,453 | INFO | Received: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds', 'Jack of Diamonds', 'Ace of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:03,414 | INFO | Received: Pile: ['2 of Hearts'] |
+| 2024-11-17 12:17:03,419 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:03,422 | INFO | Player turn set to True |
+| 2024-11-17 12:17:04,479 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:04,480 | INFO | Received: Pile: ['2 of Hearts', '6 of Hearts'] |
+| 2024-11-17 12:17:04,486 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:04,492 | INFO | Player turn set to False |
+| 2024-11-17 12:17:05,490 | INFO | Received: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs'] |
+| 2024-11-17 12:17:05,492 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:05,496 | INFO | Player turn set to True |
+| 2024-11-17 12:17:06,885 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:06,886 | INFO | Received: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts'] |
+| 2024-11-17 12:17:06,891 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:06,893 | INFO | Player turn set to False |
+| 2024-11-17 12:17:08,203 | INFO | Received: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs'] |
+| 2024-11-17 12:17:08,205 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:08,214 | INFO | Player turn set to True |
+| 2024-11-17 12:17:09,590 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:09,591 | INFO | Received: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs', 'Jack of Spades'] |
+| 2024-11-17 12:17:09,598 | INFO | Received: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs', 'Jack of Spades', '3 of Hearts']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:10,830 | INFO | Received: Pile: ['5 of Spades'] |
+| 2024-11-17 12:17:10,834 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:10,842 | INFO | Player turn set to True |
+| 2024-11-17 12:17:11,874 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:11,875 | INFO | Received: Pile: ['5 of Spades', '8 of Diamonds'] |
+| 2024-11-17 12:17:11,880 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:11,892 | INFO | Player turn set to False |
+| 2024-11-17 12:17:13,976 | INFO | Received: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs'] |
+| 2024-11-17 12:17:13,977 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:13,990 | INFO | Player turn set to True |
+| 2024-11-17 12:17:15,419 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:15,419 | INFO | Received: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds'] |
+| 2024-11-17 12:17:15,420 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:15,423 | INFO | Player turn set to False |
+| 2024-11-17 12:17:17,578 | INFO | Received: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades'] |
+| 2024-11-17 12:17:17,578 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades', '7 of Diamonds']Your turn to play a card due to face card rule.Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades', '7 of Diamonds', '10 of Spades'] |
+| 2024-11-17 12:17:17,581 | INFO | Player turn set to True |
+| 2024-11-17 12:17:17,581 | INFO | Received: Player 1 takes the pile after face card round. |
+| 2024-11-17 12:17:19,115 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:19,123 | INFO | Received: Pile: ['Queen of Clubs'] |
+| 2024-11-17 12:17:19,125 | INFO | Received: Pile: ['Queen of Clubs', '4 of Hearts'] |
+| 2024-11-17 12:17:19,128 | INFO | Received: Pile: ['Queen of Clubs', '4 of Hearts', '3 of Clubs']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:22,283 | INFO | Received: Pile: ['10 of Diamonds'] |
+| 2024-11-17 12:17:22,284 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:22,289 | INFO | Player turn set to True |
+| 2024-11-17 12:17:23,363 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:23,365 | INFO | Received: Pile: ['10 of Diamonds', '4 of Spades'] |
+| 2024-11-17 12:17:23,372 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:23,383 | INFO | Player turn set to False |
+| 2024-11-17 12:17:24,610 | INFO | Received: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs'] |
+| 2024-11-17 12:17:24,611 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:24,620 | INFO | Player turn set to True |
+| 2024-11-17 12:17:26,316 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:26,316 | INFO | Received: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts'] |
+| 2024-11-17 12:17:26,322 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:26,330 | INFO | Player turn set to False |
+| 2024-11-17 12:17:27,272 | INFO | Received: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs'] |
+| 2024-11-17 12:17:27,276 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:27,289 | INFO | Player turn set to True |
+| 2024-11-17 12:17:28,111 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:28,112 | INFO | Received: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs'] |
+| 2024-11-17 12:17:28,118 | INFO | Received: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts']Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades']Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs']Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs', '8 of Clubs']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:29,230 | INFO | Received: Pile: ['7 of Spades'] |
+| 2024-11-17 12:17:29,232 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:29,242 | INFO | Player turn set to True |
+| 2024-11-17 12:17:30,225 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:30,225 | INFO | Received: Pile: ['7 of Spades', '2 of Clubs'] |
+| 2024-11-17 12:17:30,225 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:30,226 | INFO | Player turn set to False |
+| 2024-11-17 12:17:30,965 | INFO | Received: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts'] |
+| 2024-11-17 12:17:30,967 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:30,970 | INFO | Player turn set to True |
+| 2024-11-17 12:17:31,799 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:31,800 | INFO | Received: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs'] |
+| 2024-11-17 12:17:31,803 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:31,805 | INFO | Player turn set to False |
+| 2024-11-17 12:17:32,489 | INFO | Received: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds'] |
+| 2024-11-17 12:17:32,490 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:32,492 | INFO | Player turn set to True |
+| 2024-11-17 12:17:33,115 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:33,116 | INFO | Received: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds', 'Jack of Clubs'] |
+| 2024-11-17 12:17:33,122 | INFO | Received: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds', 'Jack of Clubs', 'King of Hearts']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:33,833 | INFO | Received: Pile: ['King of Spades'] |
+| 2024-11-17 12:17:33,834 | INFO | Received: Your turn to play a card due to face card rule.Pile: ['King of Spades', '5 of Hearts']Your turn to play a card due to face card rule.Pile: ['King of Spades', '5 of Hearts', 'Ace of Hearts']Your turn to play a card due to face card rule.Pile: ['King of Spades', '5 of Hearts', 'Ace of Hearts', '6 of Diamonds']Player 1 takes the pile after face card round. |
+| 2024-11-17 12:17:33,837 | INFO | Player turn set to True |
+| 2024-11-17 12:17:34,467 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:34,467 | INFO | Received: Pile: ['Ace of Spades'] |
+| 2024-11-17 12:17:34,469 | INFO | Received: Pile: ['Ace of Spades', 'Jack of Hearts']Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades']Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades', '5 of Spades']Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades', '5 of Spades', '8 of Diamonds']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:35,138 | INFO | Received: Pile: ['5 of Clubs'] |
+| 2024-11-17 12:17:35,145 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:35,152 | INFO | Player turn set to True |
+| 2024-11-17 12:17:36,004 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:36,004 | INFO | Received: Pile: ['5 of Clubs', 'Queen of Diamonds'] |
+| 2024-11-17 12:17:36,005 | INFO | Received: Pile: ['5 of Clubs', 'Queen of Diamonds', '9 of Diamonds']Pile: ['5 of Clubs', 'Queen of Diamonds', '9 of Diamonds', 'Queen of Spades']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:36,888 | INFO | Received: Pile: ['7 of Diamonds'] |
+| 2024-11-17 12:17:36,890 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:36,894 | INFO | Player turn set to True |
+| 2024-11-17 12:17:37,515 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:37,516 | INFO | Received: Pile: ['7 of Diamonds', '9 of Spades'] |
+| 2024-11-17 12:17:37,522 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:37,535 | INFO | Player turn set to False |
+| 2024-11-17 12:17:39,558 | INFO | Received: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades'] |
+| 2024-11-17 12:17:39,566 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:39,586 | INFO | Player turn set to True |
+| 2024-11-17 12:17:40,675 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:40,676 | INFO | Received: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds'] |
+| 2024-11-17 12:17:40,681 | INFO | Received: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades']Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades', '5 of Hearts']Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades', '5 of Hearts', 'Ace of Hearts']Player 2 takes the pile after face card round. |
+| 2024-11-17 12:17:42,097 | INFO | Received: Pile: ['6 of Diamonds'] |
+| 2024-11-17 12:17:42,098 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:42,102 | INFO | Player turn set to True |
+| 2024-11-17 12:17:42,896 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:42,897 | INFO | Received: Pile: ['6 of Diamonds', '6 of Spades'] |
+| 2024-11-17 12:17:42,899 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:42,910 | INFO | Player turn set to False |
+| 2024-11-17 12:17:43,907 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 12:17:43,915 | INFO | Received: Player 1 made a valid slap and took the pile. |
+| 2024-11-17 12:17:44,645 | INFO | Received: Pile: ['6 of Diamonds'] |
+| 2024-11-17 12:17:44,646 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:44,651 | INFO | Player turn set to True |
+| 2024-11-17 12:17:46,916 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:46,917 | INFO | Received: Pile: ['6 of Diamonds', '8 of Hearts'] |
+| 2024-11-17 12:17:46,920 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:46,922 | INFO | Player turn set to False |
+| 2024-11-17 12:17:47,956 | INFO | Received: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades'] |
+| 2024-11-17 12:17:47,958 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:47,961 | INFO | Player turn set to True |
+| 2024-11-17 12:17:48,895 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:48,897 | INFO | Received: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades', '4 of Diamonds'] |
+| 2024-11-17 12:17:48,901 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:48,915 | INFO | Player turn set to False |
+| 2024-11-17 12:17:50,616 | INFO | Received: Congradulations! You have won the game! |
+| 2024-11-17 12:17:50,617 | INFO | Connection closed by server. |
+| 2024-11-17 12:17:56,489 | INFO | Shutdown message sent to server. |
+| 2024-11-17 12:17:56,489 | INFO | Client socket closed. |
+|
+| 2024-11-17 12:17:40,699 | INFO | Player turn set to True |
+| 2024-11-17 12:17:42,097 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:42,097 | INFO | Received: Pile: ['6 of Diamonds'] |
+| 2024-11-17 12:17:42,098 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:42,103 | INFO | Player turn set to False |
+| 2024-11-17 12:17:42,897 | INFO | Received: Pile: ['6 of Diamonds', '6 of Spades'] |
+| 2024-11-17 12:17:42,908 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:42,915 | INFO | Player turn set to True |
+| 2024-11-17 12:17:43,906 | INFO | Deck slapped message sent to server. |
+| 2024-11-17 12:17:43,906 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 12:17:43,926 | INFO | Received: Your hand has been updated. You now have 2 cards. |
+| 2024-11-17 12:17:44,645 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:44,645 | INFO | Received: Pile: ['6 of Diamonds'] |
+| 2024-11-17 12:17:44,649 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:44,651 | INFO | Player turn set to False |
+| 2024-11-17 12:17:46,917 | INFO | Received: Pile: ['6 of Diamonds', '8 of Hearts'] |
+| 2024-11-17 12:17:46,920 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:46,930 | INFO | Player turn set to True |
+| 2024-11-17 12:17:47,955 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:47,956 | INFO | Received: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades'] |
+| 2024-11-17 12:17:47,958 | INFO | Received: Wait for your turn. |
+| 2024-11-17 12:17:47,962 | INFO | Player turn set to False |
+| 2024-11-17 12:17:48,896 | INFO | Received: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades', '4 of Diamonds'] |
+| 2024-11-17 12:17:48,901 | INFO | Received: Your turn. |
+| 2024-11-17 12:17:48,912 | INFO | Player turn set to True |
+| 2024-11-17 12:17:50,616 | INFO | Turn taken message sent to server. |
+| 2024-11-17 12:17:50,616 | INFO | Received: You have lost the game. Better luck next time! |
+| 2024-11-17 12:17:50,618 | INFO | Connection closed by server. |
+| 2024-11-17 12:17:54,106 | INFO | Shutdown message sent to server. |
+| 2024-11-17 12:17:54,106 | INFO | Client socket closed. |

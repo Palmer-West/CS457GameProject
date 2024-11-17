@@ -1,5 +1,6 @@
 import socket
 import pydealer
+from pydealer.const import BOTTOM
 import logging
 import select
 import random
@@ -19,11 +20,28 @@ args = parser.parse_args()
 HOST = '127.0.0.1'
 PORT = args.port
 
-deck = pydealer.Deck()
+war_ranks = {
+    "Ace": 13,
+    "King": 12,
+    "Queen": 11,
+    "Jack": 10,
+    "10": 9,
+    "9": 8,
+    "8": 7,
+    "7": 6,
+    "6": 5,
+    "5": 4,
+    "4": 3,
+    "3": 2,
+    "2": 1
+}
+
+deck = pydealer.Deck(ranks=war_ranks)
 player_hands = {}
 clients = []
 pile = []
 turn = None
+rules = ['double', 'sandwitch']
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -32,6 +50,39 @@ server_socket.listen(2)
 server_socket.setblocking(False)
 logging.info(f"Server listening on {HOST}:{PORT}")
 print("Waiting for clients to connect...")
+
+def is_valid_slap():
+    if pile.count == 0:
+        return False
+    if 'double' in rules and len(pile) >= 2:
+        temp_pile = list(pile)
+        first_card = temp_pile.pop()
+        second_card = temp_pile.pop()
+        if first_card.eq(second_card, war_ranks):
+            return True
+    if 'sandwitch' in rules and len(pile) >= 3:
+        temp_pile = list(pile)
+        first_card = temp_pile.pop()
+        temp_pile.pop()
+        third_card = temp_pile.pop()
+        if first_card.eq(third_card, war_ranks):
+            return True
+    else:
+        return False
+
+def is_face_card(card):
+    return card.value in ['Jack', "Queen", "King", "Ace"]
+
+def face_card_count(card):
+    if card.value == "Jack":
+        return 1
+    if card.value == "Queen":
+        return 2
+    if card.value == "King":
+        return 3
+    if card.value == "Ace":
+        return 4
+    return 0
 
 def broadcast_message(message):
     for client in clients:
@@ -63,6 +114,9 @@ def game_setup():
     logging.info("Game has started.")
 
 try:
+    current_face_card = None
+    cards_to_play = 0
+
     while True:
         readable, _, _ = select.select([server_socket] + clients, [], [], 1)
         for s in readable:
@@ -82,16 +136,90 @@ try:
                         continue
                     logging.info(f"Received from {s.getpeername()}: {message}")
                     if message.lower() == "turn taken":
+                        #check if player hand is empty
+                        if len(player_hands[s]) == 0:
+                            winning_player = [c for c in clients if c != s][0]
+                            losing_player = s
+
+                            winning_player.send("Congradulations! You have won the game!".encode('utf-8'))
+                            losing_player.send("You have lost the game. Better luck next time!".encode('utf-8'))
+
+                            logging.info(f"Player {clients.index(winning_player) + 1} has won the game.")
+
+                            for client in clients:
+                                client.close()
+                            server_socket.close()
+                            logging.info("Server socket closed after game over.")
+                            exit()
+
                         card = player_hands[s].deal(1)
                         pile.extend(card)
                         logging.info(f"Card {card} added to the pile from Player {clients.index(s) + 1}.")
                         broadcast_message(f"Pile: {[str(c) for c in pile]}")
-                        # Switch turn
-                        turn = clients[(clients.index(s) + 1) % len(clients)]
-                        turn.send("Your turn.".encode('utf-8'))
-                        for client in clients:
-                            if client != turn:
-                                client.send("Wait for your turn.".encode('utf-8'))
+
+                        if is_face_card(card[0]):
+                            current_face_card = card[0]
+                            cards_to_play = face_card_count(current_face_card)
+                            logging.info(f"Face card {current_face_card} played. Next player must play {cards_to_play} card(s).")
+
+                            turn = clients[(clients.index(s) + 1) % len(clients)]
+                            for i in range(cards_to_play):
+                                turn.send("Your turn to play a card due to face card rule.".encode('utf-8'))
+                                played_card = player_hands[turn].deal(1)
+                                pile.extend(played_card)
+                                logging.info(f"Card {played_card} added to the pile from Player {clients.index(turn) + 1}.")
+                                broadcast_message(f"Pile: {[str(c) for c in pile]}")
+
+                                if len(player_hands[turn]) == 0:
+                                    winning_player = s
+                                    losing_player = turn
+
+                                    winning_player.send("Congradulations! You have wond the game!".encode('utf-8'))
+                                    losing_player.send("You have lost the game. Better luck next time!".encode('utf-8'))
+
+                                    logging.info(f"Player {clients.index(winning_player) + 1} has won the game.")
+                                    
+                                    for client in clients:
+                                        client.close()
+                                    server_socket.close()
+                                    logging.info("Server socket closed after game over.")
+                                    exit()
+
+                            ## player wins face card round
+                            player_hands[s].add(pile, end=BOTTOM)
+                            pile.clear()
+                            broadcast_message(f"Player {clients.index(s) + 1} takes the pile after face card round.")
+                            current_face_card = None
+                            cards_to_play = 0
+
+                        else:
+                            # Switch turn
+                            turn = clients[(clients.index(s) + 1) % len(clients)]
+                            turn.send("Your turn.".encode('utf-8'))
+                            for client in clients:
+                                if client != turn:
+                                    client.send("Wait for your turn.".encode('utf-8'))
+
+                    elif message.lower() == "slap deck":
+                        if is_valid_slap():
+                            player_hands[s].add(pile, end=BOTTOM)
+                            pile.clear()
+
+                            broadcast_message(f"Player {clients.index(s) + 1} made a valid slap. The pile is now empty.")
+                            s.send(f"Your hand has been updated. You now have {len(player_hands[s])} cards.".encode('utf-8'))
+
+                            for client in clients:
+                                if client != s:
+                                    client.send(f"Player {clients.index(s) + 1} made a valid slap and took the pile.".encode('utf-8'))
+
+                            logging.info(f"Player {clients.index(s) + 1} made a valid slap and took the pile.")
+                            current_face_card = None
+                            cards_to_play = 0
+
+                        else:
+                            s.send("Invalid slap.".encode("utf-8"))
+                            logging.info(f"Player {clients.index(s) + 1} attempted an invalid slap.")
+
                     elif message.lower() == "shutdown":
                         logging.info(f"Shutdown requested by {s.getpeername()}.")
                         broadcast_message("shutdown")
