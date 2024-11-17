@@ -1,0 +1,8 @@
+| 2024-11-17 10:20:35,723 | INFO | Connected to the server. |
+| 2024-11-17 10:20:35,777 | INFO | Received: You are Player 2. Game is starting...Game starting. You go first. Your turn |
+| 2024-11-17 10:20:35,879 | INFO | Player turn set to True |
+| 2024-11-17 10:20:40,608 | INFO | Turn taken| 2024-11-17 10:20:40,608 || 2024-11-17 10:20:40,608 | INFO | Received: | 2024-11-17 10:20:40,609 || 2024-11-17 10:20:40,609 | INF| 2024-11-17 10:20:40,612 | INFO | Player turn set to True |
+| 2024-11-17 10:20:43,559 | INFO | Tu| 2024-11-17 10:20:43,559 | INFO | Received: Pile: ['Queen of Clubs', 'Queen of Spades'] |
+| 2024-11-17 10:20:43,560 | INFO | | 2024-11-17 10:20:43,5| 2024-11-17 10:20:43,563 | INFO | Player tu| 2024-11-17 10:2| 2024-11-17 10:20:46,071 | INFO | Received: shutdown |
+| 2024-11-17 10:20:46,075 | INFO | Client socket closed. |
+| 2024-11-17 10:20:46,070 | INFO | Client socket closed. |

@@ -1,0 +1,19 @@
+| 2024-11-17 10:19:35,608 | INFO | Server listening on 127.0.0.1:5555 |
+| 2024-11-17 10:20:04,143 | INFO | Client ('127.0.0.1', 42348) connected. |
+| 2024-11-17 10:20:35,723 | INFO | Client ('127.0.0.1', 50242) connected. |
+| 2024-11-17 10:20:35,723 | INFO | Hands dealt to all players. |
+| 2024-11-17 10:20:35,723 | INFO | Game has started. |
+| 2024-11-17 10:20:40,608 | INFO | Received from ('127.0.0.1', 50242): Turn taken |
+| 2024-11-17 10:20:40,608 | INFO | Card Queen of Clubs added to the pile from Player 2. |
+| 2024-11-17 10:20:40,608 | INFO | Broadcasted: Pile: ['Queen of Clubs'] |
+| 2024-11-17 10:20:40,608 | INFO | Broadcasted: Pile: ['Queen of Clubs'] |
+| 2024-11-17 10:20:43,559 | INFO | Received from ('127.0.0.1', 42348): Turn taken |
+| 2024-11-17 10:20:43,559 | INFO | Card Queen of Spades added to the pile from Player 1. |
+| 2024-11-17 10:20:43,559 | INFO | Broadcasted: Pile: ['Queen of Clubs', 'Queen of Spades'] |
+| 2024-11-17 10:20:43,559 | INFO | Broadcasted: Pile: ['Queen of Clubs', 'Queen of Spades'] |
+| 2024-11-17 10:20:46,070 | INFO | Received from ('127.0.0.1', 42348): shutdown |
+| 2024-11-17 10:20:46,070 | INFO | Shutdown requested by ('127.0.0.1', 42348). |
+| 2024-11-17 10:20:46,070 | INFO | Broadcasted: shutdown |
+| 2024-11-17 10:20:46,071 | INFO | Broadcasted: shutdown |
+| 2024-11-17 10:20:46,071 | INFO | Server shutting down. |
+| 2024-11-17 10:20:46,071 | INFO | Server socket closed. |

@@ -3,6 +3,7 @@ import threading
 import tkinter as tk
 from tkinter import scrolledtext
 import logging
+import argparse
 
 logging.basicConfig(
     filename="client.log",
@@ -11,8 +12,13 @@ logging.basicConfig(
     format="| %(asctime)s | %(levelname)s | %(message)s |"
 )
 
-SERVER_HOST = '127.0.0.1'
-SERVER_PORT = 5555
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--ip', required=True, help='Server IP address')
+parser.add_argument('-p', '--port', type=int, required=True, help='Port number of the server')
+args = parser.parse_args()
+
+SERVER_HOST = args.ip
+SERVER_PORT = args.port
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((SERVER_HOST, SERVER_PORT))
@@ -26,7 +32,10 @@ text_area.pack(padx=10, pady=10)
 text_area.config(state=tk.DISABLED)
 
 turn_button = tk.Button(gui, text="Take Turn", command=lambda: announce_turn())
-turn_button.pack(pady=10)
+turn_button.pack(pady=5)
+
+slap_button = tk.Button(gui, text="Slap Deck", command=lambda: slap_deck())
+slap_button.pack(pady=5)
 
 shutdown_event = threading.Event()
 player_turn = False
@@ -73,6 +82,10 @@ def announce_turn():
         text_area.config(state=tk.DISABLED)
         text_area.yview(tk.END)
         logging.info("Player attempted to take turn out of sequence.")
+
+def slap_deck():
+    client_socet.send("Deck Slapped".encode('utf-8'))
+    logging.info("Deck slapped message sent to server.")
 
 
 def on_close():

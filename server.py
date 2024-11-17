@@ -3,6 +3,7 @@ import pydealer
 import logging
 import select
 import random
+import argparse
 
 logging.basicConfig(
     filename="server.log",
@@ -11,8 +12,12 @@ logging.basicConfig(
     format="| %(asctime)s | %(levelname)s | %(message)s |"
 )
 
+parser = argparse.ArgumentParser()
+parser.add_argument('-p', '--port', type=int, required=True, help='Port number for the server')
+args = parser.parse_args()
+
 HOST = '127.0.0.1'
-PORT = 5555
+PORT = args.port
 
 deck = pydealer.Deck()
 player_hands = {}
