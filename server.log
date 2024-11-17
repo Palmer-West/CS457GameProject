@@ -1,1279 +1,185 @@
-| 2024-11-17 12:13:02,755 | INFO | Server listening on 127.0.0.1:5555 |
-| 2024-11-17 12:13:05,568 | INFO | Client ('127.0.0.1', 50496) connected. |
-| 2024-11-17 12:13:09,095 | INFO | Client ('127.0.0.1', 50508) connected. |
-| 2024-11-17 12:13:09,095 | INFO | Hands dealt to all players. |
-| 2024-11-17 12:13:09,095 | INFO | Game has started. |
-| 2024-11-17 12:13:13,408 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:13,408 | INFO | Card Jack of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:13:13,409 | INFO | Broadcasted: Pile: ['Jack of Diamonds'] |
-| 2024-11-17 12:13:13,409 | INFO | Broadcasted: Pile: ['Jack of Diamonds'] |
-| 2024-11-17 12:13:13,409 | INFO | Face card Jack of Diamonds played. Next player must play 1 card(s). |
-| 2024-11-17 12:13:13,410 | INFO | Card Queen of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:13:13,410 | INFO | Broadcasted: Pile: ['Jack of Diamonds', 'Queen of Clubs'] |
-| 2024-11-17 12:13:13,410 | INFO | Broadcasted: Pile: ['Jack of Diamonds', 'Queen of Clubs'] |
-| 2024-11-17 12:13:13,410 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:13,411 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:23,105 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:23,106 | INFO | Card Ace of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:13:23,107 | INFO | Broadcasted: Pile: ['Ace of Clubs'] |
-| 2024-11-17 12:13:23,107 | INFO | Broadcasted: Pile: ['Ace of Clubs'] |
-| 2024-11-17 12:13:23,107 | INFO | Face card Ace of Clubs played. Next player must play 4 card(s). |
-| 2024-11-17 12:13:23,107 | INFO | Card 2 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:13:23,108 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds'] |
-| 2024-11-17 12:13:23,108 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds'] |
-| 2024-11-17 12:13:23,108 | INFO | Card King of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:13:23,109 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs'] |
-| 2024-11-17 12:13:23,109 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs'] |
-| 2024-11-17 12:13:23,109 | INFO | Card King of Spades added to the pile from Player 1. |
-| 2024-11-17 12:13:23,109 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs', 'King of Spades'] |
-| 2024-11-17 12:13:23,109 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs', 'King of Spades'] |
-| 2024-11-17 12:13:23,110 | INFO | Card 10 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:13:23,110 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs', 'King of Spades', '10 of Diamonds'] |
-| 2024-11-17 12:13:23,110 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Diamonds', 'King of Clubs', 'King of Spades', '10 of Diamonds'] |
-| 2024-11-17 12:13:23,110 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:13:23,111 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:13:27,370 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:27,370 | INFO | Card 7 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:13:27,370 | INFO | Broadcasted: Pile: ['7 of Spades'] |
-| 2024-11-17 12:13:27,370 | INFO | Broadcasted: Pile: ['7 of Spades'] |
-| 2024-11-17 12:13:30,296 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:30,297 | INFO | Card King of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:13:30,297 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts'] |
-| 2024-11-17 12:13:30,297 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts'] |
-| 2024-11-17 12:13:30,298 | INFO | Face card King of Hearts played. Next player must play 3 card(s). |
-| 2024-11-17 12:13:30,298 | INFO | Card 4 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:13:30,298 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:13:30,298 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:13:30,299 | INFO | Card 5 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:13:30,299 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs', '5 of Spades'] |
-| 2024-11-17 12:13:30,299 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs', '5 of Spades'] |
-| 2024-11-17 12:13:30,299 | INFO | Card 10 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:13:30,300 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs', '5 of Spades', '10 of Clubs'] |
-| 2024-11-17 12:13:30,300 | INFO | Broadcasted: Pile: ['7 of Spades', 'King of Hearts', '4 of Clubs', '5 of Spades', '10 of Clubs'] |
-| 2024-11-17 12:13:30,300 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:13:30,300 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:13:32,610 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:32,611 | INFO | Card 6 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:13:32,611 | INFO | Broadcasted: Pile: ['6 of Hearts'] |
-| 2024-11-17 12:13:32,611 | INFO | Broadcasted: Pile: ['6 of Hearts'] |
-| 2024-11-17 12:13:33,743 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:33,743 | INFO | Card 2 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:13:33,744 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Clubs'] |
-| 2024-11-17 12:13:33,744 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Clubs'] |
-| 2024-11-17 12:13:35,173 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:35,174 | INFO | Card Jack of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:13:35,174 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:13:35,174 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:13:35,175 | INFO | Face card Jack of Clubs played. Next player must play 1 card(s). |
-| 2024-11-17 12:13:35,175 | INFO | Card Queen of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:13:35,175 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Clubs', 'Jack of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:13:35,175 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Clubs', 'Jack of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:13:35,176 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:35,176 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:39,231 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:39,231 | INFO | Card 8 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:13:39,231 | INFO | Broadcasted: Pile: ['8 of Clubs'] |
-| 2024-11-17 12:13:39,232 | INFO | Broadcasted: Pile: ['8 of Clubs'] |
-| 2024-11-17 12:13:40,626 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:40,627 | INFO | Card 7 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:13:40,628 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Diamonds'] |
-| 2024-11-17 12:13:40,628 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Diamonds'] |
-| 2024-11-17 12:13:42,279 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:42,279 | INFO | Card 2 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:13:42,280 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Diamonds', '2 of Hearts'] |
-| 2024-11-17 12:13:42,280 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Diamonds', '2 of Hearts'] |
-| 2024-11-17 12:13:43,944 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:43,944 | INFO | Card 7 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:13:43,945 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Diamonds', '2 of Hearts', '7 of Clubs'] |
-| 2024-11-17 12:13:43,945 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Diamonds', '2 of Hearts', '7 of Clubs'] |
-| 2024-11-17 12:13:46,350 | INFO | Received from ('127.0.0.1', 50496): slap deck |
-| 2024-11-17 12:13:46,350 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:13:46,350 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:13:46,350 | INFO | Player 1 made a valid slap and took the pile. |
-| 2024-11-17 12:13:49,482 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:49,483 | INFO | Card 4 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:13:49,483 | INFO | Broadcasted: Pile: ['4 of Hearts'] |
-| 2024-11-17 12:13:49,483 | INFO | Broadcasted: Pile: ['4 of Hearts'] |
-| 2024-11-17 12:13:50,928 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:50,928 | INFO | Card 8 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:13:50,929 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades'] |
-| 2024-11-17 12:13:50,929 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades'] |
-| 2024-11-17 12:13:52,344 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:52,344 | INFO | Card 3 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:13:52,352 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:13:52,352 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:13:53,783 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:53,783 | INFO | Card Jack of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:13:53,784 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds', 'Jack of Hearts'] |
-| 2024-11-17 12:13:53,784 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds', 'Jack of Hearts'] |
-| 2024-11-17 12:13:53,784 | INFO | Face card Jack of Hearts played. Next player must play 1 card(s). |
-| 2024-11-17 12:13:53,784 | INFO | Card 3 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:13:53,785 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:13:53,785 | INFO | Broadcasted: Pile: ['4 of Hearts', '8 of Spades', '3 of Diamonds', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:13:53,785 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:53,785 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:55,826 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:55,827 | INFO | Card 5 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:13:55,827 | INFO | Broadcasted: Pile: ['5 of Diamonds'] |
-| 2024-11-17 12:13:55,827 | INFO | Broadcasted: Pile: ['5 of Diamonds'] |
-| 2024-11-17 12:13:56,965 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:13:56,966 | INFO | Card Jack of Spades added to the pile from Player 1. |
-| 2024-11-17 12:13:56,966 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Spades'] |
-| 2024-11-17 12:13:56,966 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Spades'] |
-| 2024-11-17 12:13:56,966 | INFO | Face card Jack of Spades played. Next player must play 1 card(s). |
-| 2024-11-17 12:13:56,966 | INFO | Card 3 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:13:56,966 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Spades', '3 of Clubs'] |
-| 2024-11-17 12:13:56,966 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Spades', '3 of Clubs'] |
-| 2024-11-17 12:13:56,966 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:56,966 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:13:58,859 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:13:58,859 | INFO | Card King of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds'] |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds'] |
-| 2024-11-17 12:13:58,859 | INFO | Face card King of Diamonds played. Next player must play 3 card(s). |
-| 2024-11-17 12:13:58,859 | INFO | Card 6 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:13:58,859 | INFO | Card 8 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:13:58,859 | INFO | Card 4 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:13:58,859 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:00,867 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:00,868 | INFO | Card Ace of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:00,868 | INFO | Broadcasted: Pile: ['Ace of Hearts'] |
-| 2024-11-17 12:14:00,869 | INFO | Broadcasted: Pile: ['Ace of Hearts'] |
-| 2024-11-17 12:14:00,869 | INFO | Face card Ace of Hearts played. Next player must play 4 card(s). |
-| 2024-11-17 12:14:00,869 | INFO | Card 9 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:00,870 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds'] |
-| 2024-11-17 12:14:00,870 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds'] |
-| 2024-11-17 12:14:00,870 | INFO | Card Ace of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:00,870 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds'] |
-| 2024-11-17 12:14:00,871 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds'] |
-| 2024-11-17 12:14:00,871 | INFO | Card 2 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:00,871 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds', '2 of Spades'] |
-| 2024-11-17 12:14:00,871 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds', '2 of Spades'] |
-| 2024-11-17 12:14:00,872 | INFO | Card 8 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:00,872 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds', '2 of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:14:00,872 | INFO | Broadcasted: Pile: ['Ace of Hearts', '9 of Diamonds', 'Ace of Diamonds', '2 of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:14:00,872 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:00,872 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:02,783 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:02,783 | INFO | Card 10 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:02,783 | INFO | Broadcasted: Pile: ['10 of Spades'] |
-| 2024-11-17 12:14:02,784 | INFO | Broadcasted: Pile: ['10 of Spades'] |
-| 2024-11-17 12:14:04,441 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:04,441 | INFO | Card 9 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:04,441 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:14:04,442 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:14:05,674 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:05,675 | INFO | Card 5 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:14:05,675 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs'] |
-| 2024-11-17 12:14:05,675 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs'] |
-| 2024-11-17 12:14:16,829 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:16,830 | INFO | Card 6 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:16,830 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:14:16,830 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:14:18,808 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:18,808 | INFO | Card 5 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:18,808 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs', '6 of Clubs', '5 of Hearts'] |
-| 2024-11-17 12:14:18,808 | INFO | Broadcasted: Pile: ['10 of Spades', '9 of Hearts', '5 of Clubs', '6 of Clubs', '5 of Hearts'] |
-| 2024-11-17 12:14:21,940 | INFO | Received from ('127.0.0.1', 50496): slap deck |
-| 2024-11-17 12:14:21,941 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:14:21,941 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:14:21,942 | INFO | Player 1 made a valid slap and took the pile. |
-| 2024-11-17 12:14:23,892 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:23,893 | INFO | Card 9 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:23,893 | INFO | Broadcasted: Pile: ['9 of Clubs'] |
-| 2024-11-17 12:14:23,893 | INFO | Broadcasted: Pile: ['9 of Clubs'] |
-| 2024-11-17 12:14:25,202 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:25,202 | INFO | Card 6 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:25,202 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds'] |
-| 2024-11-17 12:14:25,203 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds'] |
-| 2024-11-17 12:14:26,739 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:26,740 | INFO | Card Queen of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:14:26,740 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds'] |
-| 2024-11-17 12:14:26,741 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds'] |
-| 2024-11-17 12:14:26,741 | INFO | Face card Queen of Diamonds played. Next player must play 2 card(s). |
-| 2024-11-17 12:14:26,741 | INFO | Card 9 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:26,741 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:14:26,742 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:14:26,742 | INFO | Card 10 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:26,742 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds', '9 of Spades', '10 of Hearts'] |
-| 2024-11-17 12:14:26,742 | INFO | Broadcasted: Pile: ['9 of Clubs', '6 of Diamonds', 'Queen of Diamonds', '9 of Spades', '10 of Hearts'] |
-| 2024-11-17 12:14:26,743 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:26,743 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:29,038 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:29,038 | INFO | Card 7 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:29,038 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:14:29,039 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:14:30,491 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:30,491 | INFO | Card 4 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:14:30,492 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades'] |
-| 2024-11-17 12:14:30,492 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades'] |
-| 2024-11-17 12:14:31,859 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:31,859 | INFO | Card Queen of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:31,859 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades'] |
-| 2024-11-17 12:14:31,860 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades'] |
-| 2024-11-17 12:14:31,860 | INFO | Face card Queen of Spades played. Next player must play 2 card(s). |
-| 2024-11-17 12:14:31,860 | INFO | Card Ace of Spades added to the pile from Player 1. |
-| 2024-11-17 12:14:31,861 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades', 'Ace of Spades'] |
-| 2024-11-17 12:14:31,861 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades', 'Ace of Spades'] |
-| 2024-11-17 12:14:31,861 | INFO | Card Jack of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:14:31,862 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds'] |
-| 2024-11-17 12:14:31,862 | INFO | Broadcasted: Pile: ['7 of Hearts', '4 of Spades', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds'] |
-| 2024-11-17 12:14:31,862 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:31,863 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:33,175 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:33,176 | INFO | Card Queen of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:33,176 | INFO | Broadcasted: Pile: ['Queen of Clubs'] |
-| 2024-11-17 12:14:33,176 | INFO | Broadcasted: Pile: ['Queen of Clubs'] |
-| 2024-11-17 12:14:33,176 | INFO | Face card Queen of Clubs played. Next player must play 2 card(s). |
-| 2024-11-17 12:14:33,177 | INFO | Card 3 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:33,177 | INFO | Broadcasted: Pile: ['Queen of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:14:33,177 | INFO | Broadcasted: Pile: ['Queen of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:14:33,178 | INFO | Card Ace of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:14:33,178 | INFO | Broadcasted: Pile: ['Queen of Clubs', '3 of Hearts', 'Ace of Clubs'] |
-| 2024-11-17 12:14:33,178 | INFO | Broadcasted: Pile: ['Queen of Clubs', '3 of Hearts', 'Ace of Clubs'] |
-| 2024-11-17 12:14:33,178 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:33,179 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:34,400 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:34,400 | INFO | Card 2 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:34,400 | INFO | Broadcasted: Pile: ['2 of Diamonds'] |
-| 2024-11-17 12:14:34,400 | INFO | Broadcasted: Pile: ['2 of Diamonds'] |
-| 2024-11-17 12:14:35,482 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:35,482 | INFO | Card 6 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:35,482 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts'] |
-| 2024-11-17 12:14:35,483 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts'] |
-| 2024-11-17 12:14:36,507 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:36,508 | INFO | Card King of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:14:36,508 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs'] |
-| 2024-11-17 12:14:36,508 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs'] |
-| 2024-11-17 12:14:36,509 | INFO | Face card King of Clubs played. Next player must play 3 card(s). |
-| 2024-11-17 12:14:36,509 | INFO | Card 2 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:36,509 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:14:36,509 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:14:36,510 | INFO | Card Jack of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:36,510 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:14:36,510 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:14:36,511 | INFO | Card Queen of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:36,511 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs', 'Jack of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:14:36,511 | INFO | Broadcasted: Pile: ['2 of Diamonds', '6 of Hearts', 'King of Clubs', '2 of Clubs', 'Jack of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:14:36,511 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:36,511 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:37,589 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:37,590 | INFO | Card 8 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:37,590 | INFO | Broadcasted: Pile: ['8 of Clubs'] |
-| 2024-11-17 12:14:37,591 | INFO | Broadcasted: Pile: ['8 of Clubs'] |
-| 2024-11-17 12:14:38,764 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:38,764 | INFO | Card King of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:38,765 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades'] |
-| 2024-11-17 12:14:38,765 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades'] |
-| 2024-11-17 12:14:38,765 | INFO | Face card King of Spades played. Next player must play 3 card(s). |
-| 2024-11-17 12:14:38,766 | INFO | Card 7 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:14:38,766 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds'] |
-| 2024-11-17 12:14:38,766 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds'] |
-| 2024-11-17 12:14:38,766 | INFO | Card 2 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:38,767 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds', '2 of Hearts'] |
-| 2024-11-17 12:14:38,767 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds', '2 of Hearts'] |
-| 2024-11-17 12:14:38,767 | INFO | Card 7 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:38,767 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds', '2 of Hearts', '7 of Clubs'] |
-| 2024-11-17 12:14:38,768 | INFO | Broadcasted: Pile: ['8 of Clubs', 'King of Spades', '7 of Diamonds', '2 of Hearts', '7 of Clubs'] |
-| 2024-11-17 12:14:38,768 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:38,768 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:40,480 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:40,480 | INFO | Card 4 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:40,480 | INFO | Broadcasted: Pile: ['4 of Hearts'] |
-| 2024-11-17 12:14:40,481 | INFO | Broadcasted: Pile: ['4 of Hearts'] |
-| 2024-11-17 12:14:41,413 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:41,413 | INFO | Card 10 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:41,413 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds'] |
-| 2024-11-17 12:14:41,414 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds'] |
-| 2024-11-17 12:14:42,409 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:42,410 | INFO | Card 8 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:14:42,410 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades'] |
-| 2024-11-17 12:14:42,410 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades'] |
-| 2024-11-17 12:14:43,946 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:43,946 | INFO | Card 7 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:43,947 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades'] |
-| 2024-11-17 12:14:43,947 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades'] |
-| 2024-11-17 12:14:45,029 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:45,030 | INFO | Card 3 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:14:45,030 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:14:45,030 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:14:46,793 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:46,794 | INFO | Card King of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:46,794 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts'] |
-| 2024-11-17 12:14:46,794 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts'] |
-| 2024-11-17 12:14:46,794 | INFO | Face card King of Hearts played. Next player must play 3 card(s). |
-| 2024-11-17 12:14:46,795 | INFO | Card Jack of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:46,795 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts'] |
-| 2024-11-17 12:14:46,795 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts'] |
-| 2024-11-17 12:14:46,795 | INFO | Card 3 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:14:46,796 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:14:46,796 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:14:46,796 | INFO | Card 5 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:14:46,797 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts', '3 of Spades', '5 of Diamonds'] |
-| 2024-11-17 12:14:46,797 | INFO | Broadcasted: Pile: ['4 of Hearts', '10 of Diamonds', '8 of Spades', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts', '3 of Spades', '5 of Diamonds'] |
-| 2024-11-17 12:14:46,797 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:46,797 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:14:48,210 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:48,211 | INFO | Card Jack of Spades added to the pile from Player 1. |
-| 2024-11-17 12:14:48,211 | INFO | Broadcasted: Pile: ['Jack of Spades'] |
-| 2024-11-17 12:14:48,211 | INFO | Broadcasted: Pile: ['Jack of Spades'] |
-| 2024-11-17 12:14:48,211 | INFO | Face card Jack of Spades played. Next player must play 1 card(s). |
-| 2024-11-17 12:14:48,212 | INFO | Card 4 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:14:48,212 | INFO | Broadcasted: Pile: ['Jack of Spades', '4 of Clubs'] |
-| 2024-11-17 12:14:48,212 | INFO | Broadcasted: Pile: ['Jack of Spades', '4 of Clubs'] |
-| 2024-11-17 12:14:48,212 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:48,213 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:50,588 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:50,589 | INFO | Card 5 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:50,590 | INFO | Broadcasted: Pile: ['5 of Spades'] |
-| 2024-11-17 12:14:50,590 | INFO | Broadcasted: Pile: ['5 of Spades'] |
-| 2024-11-17 12:14:51,613 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:51,613 | INFO | Card 3 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:14:51,614 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs'] |
-| 2024-11-17 12:14:51,614 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs'] |
-| 2024-11-17 12:14:52,831 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:52,832 | INFO | Card 10 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:14:52,832 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs'] |
-| 2024-11-17 12:14:52,832 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs'] |
-| 2024-11-17 12:14:54,240 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:54,241 | INFO | Card Ace of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:14:54,241 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts'] |
-| 2024-11-17 12:14:54,241 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts'] |
-| 2024-11-17 12:14:54,242 | INFO | Face card Ace of Hearts played. Next player must play 4 card(s). |
-| 2024-11-17 12:14:54,242 | INFO | Card King of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:54,242 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds'] |
-| 2024-11-17 12:14:54,243 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds'] |
-| 2024-11-17 12:14:54,243 | INFO | Card 6 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:14:54,243 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:14:54,243 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:14:54,244 | INFO | Card 8 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:54,244 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:14:54,244 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:14:54,244 | INFO | Card 4 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:14:54,245 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:14:54,245 | INFO | Broadcasted: Pile: ['5 of Spades', '3 of Clubs', '10 of Clubs', 'Ace of Hearts', 'King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:14:54,245 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:54,245 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:14:57,580 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:14:57,581 | INFO | Card 7 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:14:57,581 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:14:57,581 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:14:59,288 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:14:59,288 | INFO | Card 9 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:14:59,288 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds'] |
-| 2024-11-17 12:14:59,288 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds'] |
-| 2024-11-17 12:15:00,605 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:00,605 | INFO | Card 4 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:00,605 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades'] |
-| 2024-11-17 12:15:00,606 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades'] |
-| 2024-11-17 12:15:12,401 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:12,401 | INFO | Card Ace of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:15:12,401 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds'] |
-| 2024-11-17 12:15:12,402 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds'] |
-| 2024-11-17 12:15:12,402 | INFO | Face card Ace of Diamonds played. Next player must play 4 card(s). |
-| 2024-11-17 12:15:12,402 | INFO | Card Queen of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:12,402 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades'] |
-| 2024-11-17 12:15:12,403 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades'] |
-| 2024-11-17 12:15:12,403 | INFO | Card Ace of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:12,403 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades'] |
-| 2024-11-17 12:15:12,403 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades'] |
-| 2024-11-17 12:15:12,404 | INFO | Card Jack of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:15:12,404 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds'] |
-| 2024-11-17 12:15:12,404 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds'] |
-| 2024-11-17 12:15:12,404 | INFO | Card 2 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:15:12,405 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds', '2 of Diamonds'] |
-| 2024-11-17 12:15:12,405 | INFO | Broadcasted: Pile: ['7 of Hearts', '9 of Diamonds', '4 of Spades', 'Ace of Diamonds', 'Queen of Spades', 'Ace of Spades', 'Jack of Diamonds', '2 of Diamonds'] |
-| 2024-11-17 12:15:12,405 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:12,405 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:13,704 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:13,704 | INFO | Card 6 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:13,705 | INFO | Broadcasted: Pile: ['6 of Hearts'] |
-| 2024-11-17 12:15:13,705 | INFO | Broadcasted: Pile: ['6 of Hearts'] |
-| 2024-11-17 12:15:14,971 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:14,972 | INFO | Card 2 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:15:14,972 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades'] |
-| 2024-11-17 12:15:14,972 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades'] |
-| 2024-11-17 12:15:15,960 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:15,960 | INFO | Card King of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:15:15,961 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:15:15,961 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:15:15,961 | INFO | Face card King of Clubs played. Next player must play 3 card(s). |
-| 2024-11-17 12:15:15,961 | INFO | Card 8 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:15:15,962 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds'] |
-| 2024-11-17 12:15:15,962 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds'] |
-| 2024-11-17 12:15:15,962 | INFO | Card 10 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:15:15,963 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:15:15,963 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:15:15,963 | INFO | Card 9 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:15,964 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds', '10 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:15:15,964 | INFO | Broadcasted: Pile: ['6 of Hearts', '2 of Spades', 'King of Clubs', '8 of Diamonds', '10 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:15:15,964 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:15,964 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:16,809 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:16,809 | INFO | Card 5 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:16,809 | INFO | Broadcasted: Pile: ['5 of Clubs'] |
-| 2024-11-17 12:15:16,810 | INFO | Broadcasted: Pile: ['5 of Clubs'] |
-| 2024-11-17 12:15:17,825 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:17,826 | INFO | Card 2 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:15:17,826 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:15:17,826 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:15:18,801 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:18,801 | INFO | Card 6 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:18,801 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:15:18,801 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:15:19,989 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:19,990 | INFO | Card Jack of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:15:19,990 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:15:19,990 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:15:19,991 | INFO | Face card Jack of Clubs played. Next player must play 1 card(s). |
-| 2024-11-17 12:15:19,991 | INFO | Card 5 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:19,991 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs', '5 of Hearts'] |
-| 2024-11-17 12:15:19,991 | INFO | Broadcasted: Pile: ['5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs', '5 of Hearts'] |
-| 2024-11-17 12:15:19,991 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:19,992 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:21,428 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:21,428 | INFO | Card 9 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:21,429 | INFO | Broadcasted: Pile: ['9 of Clubs'] |
-| 2024-11-17 12:15:21,429 | INFO | Broadcasted: Pile: ['9 of Clubs'] |
-| 2024-11-17 12:15:22,482 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:22,482 | INFO | Card Queen of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:22,483 | INFO | Broadcasted: Pile: ['9 of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:15:22,483 | INFO | Broadcasted: Pile: ['9 of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:15:22,483 | INFO | Face card Queen of Hearts played. Next player must play 2 card(s). |
-| 2024-11-17 12:15:22,484 | INFO | Card 6 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:15:22,484 | INFO | Broadcasted: Pile: ['9 of Clubs', 'Queen of Hearts', '6 of Diamonds'] |
-| 2024-11-17 12:15:22,484 | INFO | Broadcasted: Pile: ['9 of Clubs', 'Queen of Hearts', '6 of Diamonds'] |
-| 2024-11-17 12:15:22,484 | INFO | Card Queen of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:15:22,485 | INFO | Broadcasted: Pile: ['9 of Clubs', 'Queen of Hearts', '6 of Diamonds', 'Queen of Diamonds'] |
-| 2024-11-17 12:15:22,485 | INFO | Broadcasted: Pile: ['9 of Clubs', 'Queen of Hearts', '6 of Diamonds', 'Queen of Diamonds'] |
-| 2024-11-17 12:15:22,485 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:22,485 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:24,184 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:24,184 | INFO | Card 9 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:15:24,185 | INFO | Broadcasted: Pile: ['9 of Spades'] |
-| 2024-11-17 12:15:24,185 | INFO | Broadcasted: Pile: ['9 of Spades'] |
-| 2024-11-17 12:15:25,251 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:25,251 | INFO | Card 8 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:15:25,252 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs'] |
-| 2024-11-17 12:15:25,252 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs'] |
-| 2024-11-17 12:15:26,447 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:26,447 | INFO | Card 10 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:26,447 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts'] |
-| 2024-11-17 12:15:26,447 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts'] |
-| 2024-11-17 12:15:28,490 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:28,490 | INFO | Card King of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:28,490 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades'] |
-| 2024-11-17 12:15:28,491 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades'] |
-| 2024-11-17 12:15:28,491 | INFO | Face card King of Spades played. Next player must play 3 card(s). |
-| 2024-11-17 12:15:28,491 | INFO | Card Queen of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:28,491 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs'] |
-| 2024-11-17 12:15:28,492 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs'] |
-| 2024-11-17 12:15:28,492 | INFO | Card 3 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:28,492 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:15:28,493 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:15:28,493 | INFO | Card Ace of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:28,493 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs', '3 of Hearts', 'Ace of Clubs'] |
-| 2024-11-17 12:15:28,493 | INFO | Broadcasted: Pile: ['9 of Spades', '8 of Clubs', '10 of Hearts', 'King of Spades', 'Queen of Clubs', '3 of Hearts', 'Ace of Clubs'] |
-| 2024-11-17 12:15:28,493 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:28,494 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:29,664 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:29,665 | INFO | Card Jack of Spades added to the pile from Player 1. |
-| 2024-11-17 12:15:29,665 | INFO | Broadcasted: Pile: ['Jack of Spades'] |
-| 2024-11-17 12:15:29,665 | INFO | Broadcasted: Pile: ['Jack of Spades'] |
-| 2024-11-17 12:15:29,665 | INFO | Face card Jack of Spades played. Next player must play 1 card(s). |
-| 2024-11-17 12:15:29,665 | INFO | Card 7 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:15:29,665 | INFO | Broadcasted: Pile: ['Jack of Spades', '7 of Diamonds'] |
-| 2024-11-17 12:15:29,666 | INFO | Broadcasted: Pile: ['Jack of Spades', '7 of Diamonds'] |
-| 2024-11-17 12:15:29,666 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:29,666 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:39,190 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:39,191 | INFO | Card 2 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:39,191 | INFO | Broadcasted: Pile: ['2 of Hearts'] |
-| 2024-11-17 12:15:39,191 | INFO | Broadcasted: Pile: ['2 of Hearts'] |
-| 2024-11-17 12:15:40,771 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:40,771 | INFO | Card 4 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:40,772 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:15:40,772 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:15:41,889 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:41,889 | INFO | Card 7 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:15:41,889 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs'] |
-| 2024-11-17 12:15:41,890 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs'] |
-| 2024-11-17 12:15:43,248 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:43,249 | INFO | Card 5 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:15:43,249 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades'] |
-| 2024-11-17 12:15:43,249 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades'] |
-| 2024-11-17 12:15:44,429 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:44,430 | INFO | Card 4 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:44,430 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts'] |
-| 2024-11-17 12:15:44,430 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts'] |
-| 2024-11-17 12:15:45,512 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:45,512 | INFO | Card 3 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:45,513 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:15:45,513 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:15:46,666 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:46,666 | INFO | Card 10 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:15:46,666 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds'] |
-| 2024-11-17 12:15:46,667 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds'] |
-| 2024-11-17 12:15:48,317 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:48,317 | INFO | Card 10 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:15:48,317 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs'] |
-| 2024-11-17 12:15:48,317 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs'] |
-| 2024-11-17 12:15:49,335 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:49,335 | INFO | Card 8 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:49,335 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades'] |
-| 2024-11-17 12:15:49,335 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades'] |
-| 2024-11-17 12:15:52,033 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:52,034 | INFO | Card Ace of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:52,034 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts'] |
-| 2024-11-17 12:15:52,034 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts'] |
-| 2024-11-17 12:15:52,035 | INFO | Face card Ace of Hearts played. Next player must play 4 card(s). |
-| 2024-11-17 12:15:52,035 | INFO | Card 7 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:52,035 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades'] |
-| 2024-11-17 12:15:52,035 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades'] |
-| 2024-11-17 12:15:52,036 | INFO | Card 3 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:15:52,036 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:15:52,036 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:15:52,037 | INFO | Card King of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:52,037 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds', 'King of Hearts'] |
-| 2024-11-17 12:15:52,037 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds', 'King of Hearts'] |
-| 2024-11-17 12:15:52,037 | INFO | Card Jack of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:52,038 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts'] |
-| 2024-11-17 12:15:52,038 | INFO | Broadcasted: Pile: ['2 of Hearts', '4 of Clubs', '7 of Clubs', '5 of Spades', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs', '8 of Spades', 'Ace of Hearts', '7 of Spades', '3 of Diamonds', 'King of Hearts', 'Jack of Hearts'] |
-| 2024-11-17 12:15:52,038 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:52,039 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:53,571 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:53,571 | INFO | Card 3 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:53,571 | INFO | Broadcasted: Pile: ['3 of Spades'] |
-| 2024-11-17 12:15:53,572 | INFO | Broadcasted: Pile: ['3 of Spades'] |
-| 2024-11-17 12:15:54,696 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:54,697 | INFO | Card King of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:15:54,697 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds'] |
-| 2024-11-17 12:15:54,697 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds'] |
-| 2024-11-17 12:15:54,697 | INFO | Face card King of Diamonds played. Next player must play 3 card(s). |
-| 2024-11-17 12:15:54,698 | INFO | Card 5 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:15:54,698 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds'] |
-| 2024-11-17 12:15:54,698 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds'] |
-| 2024-11-17 12:15:54,698 | INFO | Card 6 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:15:54,699 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds', '6 of Hearts'] |
-| 2024-11-17 12:15:54,699 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds', '6 of Hearts'] |
-| 2024-11-17 12:15:54,699 | INFO | Card 2 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:15:54,700 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds', '6 of Hearts', '2 of Spades'] |
-| 2024-11-17 12:15:54,700 | INFO | Broadcasted: Pile: ['3 of Spades', 'King of Diamonds', '5 of Diamonds', '6 of Hearts', '2 of Spades'] |
-| 2024-11-17 12:15:54,700 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:54,700 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:15:57,514 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:15:57,514 | INFO | Card King of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:15:57,514 | INFO | Broadcasted: Pile: ['King of Clubs'] |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs'] |
-| 2024-11-17 12:15:57,515 | INFO | Face card King of Clubs played. Next player must play 3 card(s). |
-| 2024-11-17 12:15:57,515 | INFO | Card 6 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs', '6 of Spades'] |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs', '6 of Spades'] |
-| 2024-11-17 12:15:57,515 | INFO | Card 8 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:15:57,515 | INFO | Card 4 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Pile: ['King of Clubs', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:57,515 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:15:59,017 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:15:59,017 | INFO | Card 7 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:15:59,018 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:15:59,018 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:16:00,178 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:00,178 | INFO | Card 8 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:00,178 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds'] |
-| 2024-11-17 12:16:00,178 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds'] |
-| 2024-11-17 12:16:01,296 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:01,297 | INFO | Card 9 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:01,297 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds'] |
-| 2024-11-17 12:16:01,297 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds'] |
-| 2024-11-17 12:16:03,317 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:03,318 | INFO | Card 10 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:03,326 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:16:03,326 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:16:05,104 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:05,105 | INFO | Card 4 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:05,105 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades'] |
-| 2024-11-17 12:16:05,106 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades'] |
-| 2024-11-17 12:16:06,522 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:06,523 | INFO | Card 9 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:06,523 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:16:06,523 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:16:08,543 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:08,543 | INFO | Card Ace of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:08,543 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds'] |
-| 2024-11-17 12:16:08,544 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds'] |
-| 2024-11-17 12:16:08,544 | INFO | Face card Ace of Diamonds played. Next player must play 4 card(s). |
-| 2024-11-17 12:16:08,544 | INFO | Card 5 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:08,544 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs'] |
-| 2024-11-17 12:16:08,545 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs'] |
-| 2024-11-17 12:16:08,545 | INFO | Card 2 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:08,545 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:16:08,545 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:16:08,546 | INFO | Card 6 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:08,546 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:16:08,546 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:16:08,546 | INFO | Card Jack of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:08,547 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:16:08,547 | INFO | Broadcasted: Pile: ['7 of Hearts', '8 of Diamonds', '9 of Diamonds', '10 of Spades', '4 of Spades', '9 of Hearts', 'Ace of Diamonds', '5 of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:16:08,547 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:08,547 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:09,833 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:09,833 | INFO | Card 5 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:09,833 | INFO | Broadcasted: Pile: ['5 of Hearts'] |
-| 2024-11-17 12:16:09,833 | INFO | Broadcasted: Pile: ['5 of Hearts'] |
-| 2024-11-17 12:16:10,907 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:10,907 | INFO | Card Queen of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:10,908 | INFO | Broadcasted: Pile: ['5 of Hearts', 'Queen of Spades'] |
-| 2024-11-17 12:16:10,908 | INFO | Broadcasted: Pile: ['5 of Hearts', 'Queen of Spades'] |
-| 2024-11-17 12:16:10,908 | INFO | Face card Queen of Spades played. Next player must play 2 card(s). |
-| 2024-11-17 12:16:10,909 | INFO | Card 9 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:10,909 | INFO | Broadcasted: Pile: ['5 of Hearts', 'Queen of Spades', '9 of Clubs'] |
-| 2024-11-17 12:16:10,909 | INFO | Broadcasted: Pile: ['5 of Hearts', 'Queen of Spades', '9 of Clubs'] |
-| 2024-11-17 12:16:10,909 | INFO | Card Queen of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:10,910 | INFO | Broadcasted: Pile: ['5 of Hearts', 'Queen of Spades', '9 of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:16:10,910 | INFO | Broadcasted: Pile: ['5 of Hearts', 'Queen of Spades', '9 of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:16:10,910 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:10,910 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:12,323 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:12,323 | INFO | Card 6 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:12,324 | INFO | Broadcasted: Pile: ['6 of Diamonds'] |
-| 2024-11-17 12:16:12,324 | INFO | Broadcasted: Pile: ['6 of Diamonds'] |
-| 2024-11-17 12:16:13,377 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:13,378 | INFO | Card Ace of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:13,378 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades'] |
-| 2024-11-17 12:16:13,378 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades'] |
-| 2024-11-17 12:16:13,379 | INFO | Face card Ace of Spades played. Next player must play 4 card(s). |
-| 2024-11-17 12:16:13,379 | INFO | Card Queen of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:13,379 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds'] |
-| 2024-11-17 12:16:13,379 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds'] |
-| 2024-11-17 12:16:13,380 | INFO | Card 9 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:13,380 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:16:13,380 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:16:13,381 | INFO | Card 8 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:13,381 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades', '8 of Clubs'] |
-| 2024-11-17 12:16:13,382 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades', '8 of Clubs'] |
-| 2024-11-17 12:16:13,382 | INFO | Card 10 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:13,382 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades', '8 of Clubs', '10 of Hearts'] |
-| 2024-11-17 12:16:13,382 | INFO | Broadcasted: Pile: ['6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades', '8 of Clubs', '10 of Hearts'] |
-| 2024-11-17 12:16:13,382 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:13,383 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:14,430 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:14,430 | INFO | Card King of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:14,430 | INFO | Broadcasted: Pile: ['King of Spades'] |
-| 2024-11-17 12:16:14,430 | INFO | Broadcasted: Pile: ['King of Spades'] |
-| 2024-11-17 12:16:14,430 | INFO | Face card King of Spades played. Next player must play 3 card(s). |
-| 2024-11-17 12:16:14,430 | INFO | Card Jack of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Diamonds'] |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Diamonds'] |
-| 2024-11-17 12:16:14,431 | INFO | Card 2 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Diamonds', '2 of Diamonds'] |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Diamonds', '2 of Diamonds'] |
-| 2024-11-17 12:16:14,431 | INFO | Card Jack of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Diamonds', '2 of Diamonds', 'Jack of Spades'] |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Diamonds', '2 of Diamonds', 'Jack of Spades'] |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:14,431 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:15,519 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:15,519 | INFO | Card 7 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:15,519 | INFO | Broadcasted: Pile: ['7 of Diamonds'] |
-| 2024-11-17 12:16:15,519 | INFO | Broadcasted: Pile: ['7 of Diamonds'] |
-| 2024-11-17 12:16:16,759 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:16,759 | INFO | Card Queen of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:16,760 | INFO | Broadcasted: Pile: ['7 of Diamonds', 'Queen of Clubs'] |
-| 2024-11-17 12:16:16,760 | INFO | Broadcasted: Pile: ['7 of Diamonds', 'Queen of Clubs'] |
-| 2024-11-17 12:16:16,760 | INFO | Face card Queen of Clubs played. Next player must play 2 card(s). |
-| 2024-11-17 12:16:16,761 | INFO | Card 2 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:16,761 | INFO | Broadcasted: Pile: ['7 of Diamonds', 'Queen of Clubs', '2 of Hearts'] |
-| 2024-11-17 12:16:16,761 | INFO | Broadcasted: Pile: ['7 of Diamonds', 'Queen of Clubs', '2 of Hearts'] |
-| 2024-11-17 12:16:16,762 | INFO | Card 4 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:16,762 | INFO | Broadcasted: Pile: ['7 of Diamonds', 'Queen of Clubs', '2 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:16:16,762 | INFO | Broadcasted: Pile: ['7 of Diamonds', 'Queen of Clubs', '2 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:16:16,763 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:16,763 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:18,046 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:18,046 | INFO | Card 7 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:18,046 | INFO | Broadcasted: Pile: ['7 of Clubs'] |
-| 2024-11-17 12:16:18,046 | INFO | Broadcasted: Pile: ['7 of Clubs'] |
-| 2024-11-17 12:16:19,426 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:19,427 | INFO | Card 3 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:19,427 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:16:19,427 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:16:20,787 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:20,787 | INFO | Card 5 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:20,787 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades'] |
-| 2024-11-17 12:16:20,787 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades'] |
-| 2024-11-17 12:16:22,275 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:22,276 | INFO | Card Ace of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:22,276 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs'] |
-| 2024-11-17 12:16:22,276 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs'] |
-| 2024-11-17 12:16:22,276 | INFO | Face card Ace of Clubs played. Next player must play 4 card(s). |
-| 2024-11-17 12:16:22,276 | INFO | Card 4 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:22,277 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts'] |
-| 2024-11-17 12:16:22,277 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts'] |
-| 2024-11-17 12:16:22,277 | INFO | Card 3 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:22,277 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:16:22,277 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:16:22,278 | INFO | Card 10 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:22,278 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs', '10 of Diamonds'] |
-| 2024-11-17 12:16:22,278 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs', '10 of Diamonds'] |
-| 2024-11-17 12:16:22,278 | INFO | Card 10 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:22,278 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs'] |
-| 2024-11-17 12:16:22,279 | INFO | Broadcasted: Pile: ['7 of Clubs', '3 of Hearts', '5 of Spades', 'Ace of Clubs', '4 of Hearts', '3 of Clubs', '10 of Diamonds', '10 of Clubs'] |
-| 2024-11-17 12:16:22,279 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:22,279 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:23,876 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:23,877 | INFO | Card 8 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:23,877 | INFO | Broadcasted: Pile: ['8 of Spades'] |
-| 2024-11-17 12:16:23,877 | INFO | Broadcasted: Pile: ['8 of Spades'] |
-| 2024-11-17 12:16:24,980 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:24,980 | INFO | Card King of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:24,981 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:16:24,981 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:16:24,981 | INFO | Face card King of Clubs played. Next player must play 3 card(s). |
-| 2024-11-17 12:16:24,981 | INFO | Card Ace of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:24,981 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts'] |
-| 2024-11-17 12:16:24,981 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts'] |
-| 2024-11-17 12:16:24,982 | INFO | Card 7 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:24,982 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts', '7 of Spades'] |
-| 2024-11-17 12:16:24,982 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts', '7 of Spades'] |
-| 2024-11-17 12:16:24,982 | INFO | Card 3 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:24,982 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts', '7 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:16:24,983 | INFO | Broadcasted: Pile: ['8 of Spades', 'King of Clubs', 'Ace of Hearts', '7 of Spades', '3 of Diamonds'] |
-| 2024-11-17 12:16:24,983 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:24,983 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:26,325 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:26,326 | INFO | Card King of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:26,326 | INFO | Broadcasted: Pile: ['King of Hearts'] |
-| 2024-11-17 12:16:26,326 | INFO | Broadcasted: Pile: ['King of Hearts'] |
-| 2024-11-17 12:16:26,326 | INFO | Face card King of Hearts played. Next player must play 3 card(s). |
-| 2024-11-17 12:16:26,327 | INFO | Card 6 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:26,327 | INFO | Broadcasted: Pile: ['King of Hearts', '6 of Spades'] |
-| 2024-11-17 12:16:26,327 | INFO | Broadcasted: Pile: ['King of Hearts', '6 of Spades'] |
-| 2024-11-17 12:16:26,327 | INFO | Card 8 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:26,328 | INFO | Broadcasted: Pile: ['King of Hearts', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:16:26,328 | INFO | Broadcasted: Pile: ['King of Hearts', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:16:26,328 | INFO | Card 4 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:26,329 | INFO | Broadcasted: Pile: ['King of Hearts', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:16:26,329 | INFO | Broadcasted: Pile: ['King of Hearts', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:16:26,329 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:26,329 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:27,245 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:27,245 | INFO | Card King of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:27,246 | INFO | Broadcasted: Pile: ['King of Spades'] |
-| 2024-11-17 12:16:27,246 | INFO | Broadcasted: Pile: ['King of Spades'] |
-| 2024-11-17 12:16:27,246 | INFO | Face card King of Spades played. Next player must play 3 card(s). |
-| 2024-11-17 12:16:27,247 | INFO | Card Jack of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:27,247 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Hearts'] |
-| 2024-11-17 12:16:27,247 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Hearts'] |
-| 2024-11-17 12:16:27,248 | INFO | Card 3 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:27,248 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:16:27,248 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:16:27,248 | INFO | Card King of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:27,249 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Hearts', '3 of Spades', 'King of Diamonds'] |
-| 2024-11-17 12:16:27,249 | INFO | Broadcasted: Pile: ['King of Spades', 'Jack of Hearts', '3 of Spades', 'King of Diamonds'] |
-| 2024-11-17 12:16:27,249 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:27,249 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:27,950 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:27,950 | INFO | Card 5 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:27,950 | INFO | Broadcasted: Pile: ['5 of Diamonds'] |
-| 2024-11-17 12:16:27,950 | INFO | Broadcasted: Pile: ['5 of Diamonds'] |
-| 2024-11-17 12:16:29,835 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:29,835 | INFO | Card Jack of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:29,836 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Diamonds'] |
-| 2024-11-17 12:16:29,836 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Diamonds'] |
-| 2024-11-17 12:16:29,836 | INFO | Face card Jack of Diamonds played. Next player must play 1 card(s). |
-| 2024-11-17 12:16:29,837 | INFO | Card 6 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:29,837 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Diamonds', '6 of Hearts'] |
-| 2024-11-17 12:16:29,837 | INFO | Broadcasted: Pile: ['5 of Diamonds', 'Jack of Diamonds', '6 of Hearts'] |
-| 2024-11-17 12:16:29,837 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:29,838 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:31,415 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:31,415 | INFO | Card 2 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:31,415 | INFO | Broadcasted: Pile: ['2 of Spades'] |
-| 2024-11-17 12:16:31,415 | INFO | Broadcasted: Pile: ['2 of Spades'] |
-| 2024-11-17 12:16:32,170 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:32,170 | INFO | Card 2 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:32,170 | INFO | Broadcasted: Pile: ['2 of Spades', '2 of Diamonds'] |
-| 2024-11-17 12:16:32,170 | INFO | Broadcasted: Pile: ['2 of Spades', '2 of Diamonds'] |
-| 2024-11-17 12:16:33,259 | INFO | Received from ('127.0.0.1', 50496): slap deck |
-| 2024-11-17 12:16:33,259 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:16:33,259 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:16:33,259 | INFO | Player 1 made a valid slap and took the pile. |
-| 2024-11-17 12:16:35,693 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:35,694 | INFO | Card 7 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:35,694 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:16:35,694 | INFO | Broadcasted: Pile: ['7 of Hearts'] |
-| 2024-11-17 12:16:37,287 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:37,295 | INFO | Card Jack of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:37,295 | INFO | Broadcasted: Pile: ['7 of Hearts', 'Jack of Spades'] |
-| 2024-11-17 12:16:37,295 | INFO | Broadcasted: Pile: ['7 of Hearts', 'Jack of Spades'] |
-| 2024-11-17 12:16:37,295 | INFO | Face card Jack of Spades played. Next player must play 1 card(s). |
-| 2024-11-17 12:16:37,295 | INFO | Card 8 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:37,295 | INFO | Broadcasted: Pile: ['7 of Hearts', 'Jack of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:16:37,295 | INFO | Broadcasted: Pile: ['7 of Hearts', 'Jack of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:16:37,295 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:37,295 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:38,249 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:38,249 | INFO | Card 9 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:38,249 | INFO | Broadcasted: Pile: ['9 of Diamonds'] |
-| 2024-11-17 12:16:38,249 | INFO | Broadcasted: Pile: ['9 of Diamonds'] |
-| 2024-11-17 12:16:39,495 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:39,495 | INFO | Card 7 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:39,495 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds'] |
-| 2024-11-17 12:16:39,496 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds'] |
-| 2024-11-17 12:16:40,662 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:40,663 | INFO | Card 10 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:40,663 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:16:40,663 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:16:41,423 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:41,423 | INFO | Card Queen of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:41,423 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs'] |
-| 2024-11-17 12:16:41,423 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs'] |
-| 2024-11-17 12:16:41,424 | INFO | Face card Queen of Clubs played. Next player must play 2 card(s). |
-| 2024-11-17 12:16:41,424 | INFO | Card 4 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:41,424 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs', '4 of Spades'] |
-| 2024-11-17 12:16:41,424 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs', '4 of Spades'] |
-| 2024-11-17 12:16:41,424 | INFO | Card 9 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:41,424 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs', '4 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:16:41,424 | INFO | Broadcasted: Pile: ['9 of Diamonds', '7 of Diamonds', '10 of Spades', 'Queen of Clubs', '4 of Spades', '9 of Hearts'] |
-| 2024-11-17 12:16:41,424 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:41,424 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:42,726 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:42,726 | INFO | Card Ace of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:42,726 | INFO | Broadcasted: Pile: ['Ace of Diamonds'] |
-| 2024-11-17 12:16:42,726 | INFO | Broadcasted: Pile: ['Ace of Diamonds'] |
-| 2024-11-17 12:16:42,726 | INFO | Face card Ace of Diamonds played. Next player must play 4 card(s). |
-| 2024-11-17 12:16:42,726 | INFO | Card 2 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:42,726 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts'] |
-| 2024-11-17 12:16:42,726 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts'] |
-| 2024-11-17 12:16:42,726 | INFO | Card 4 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:42,726 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:16:42,726 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:16:42,727 | INFO | Card 7 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:42,727 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs', '7 of Clubs'] |
-| 2024-11-17 12:16:42,727 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs', '7 of Clubs'] |
-| 2024-11-17 12:16:42,727 | INFO | Card 3 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:42,727 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs', '7 of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:16:42,727 | INFO | Broadcasted: Pile: ['Ace of Diamonds', '2 of Hearts', '4 of Clubs', '7 of Clubs', '3 of Hearts'] |
-| 2024-11-17 12:16:42,727 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:42,727 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:43,751 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:43,751 | INFO | Card 5 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:43,751 | INFO | Broadcasted: Pile: ['5 of Spades'] |
-| 2024-11-17 12:16:43,751 | INFO | Broadcasted: Pile: ['5 of Spades'] |
-| 2024-11-17 12:16:44,621 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:44,621 | INFO | Card 5 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:44,621 | INFO | Broadcasted: Pile: ['5 of Spades', '5 of Clubs'] |
-| 2024-11-17 12:16:44,621 | INFO | Broadcasted: Pile: ['5 of Spades', '5 of Clubs'] |
-| 2024-11-17 12:16:45,788 | INFO | Received from ('127.0.0.1', 50496): slap deck |
-| 2024-11-17 12:16:45,788 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:16:45,788 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:16:45,789 | INFO | Player 1 made a valid slap and took the pile. |
-| 2024-11-17 12:16:48,058 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:48,058 | INFO | Card Ace of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:48,059 | INFO | Broadcasted: Pile: ['Ace of Clubs'] |
-| 2024-11-17 12:16:48,059 | INFO | Broadcasted: Pile: ['Ace of Clubs'] |
-| 2024-11-17 12:16:48,059 | INFO | Face card Ace of Clubs played. Next player must play 4 card(s). |
-| 2024-11-17 12:16:48,060 | INFO | Card 2 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:48,060 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:16:48,060 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs'] |
-| 2024-11-17 12:16:48,060 | INFO | Card 6 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:48,060 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:16:48,061 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs'] |
-| 2024-11-17 12:16:48,061 | INFO | Card Jack of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:48,061 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:16:48,061 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs'] |
-| 2024-11-17 12:16:48,062 | INFO | Card 5 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:48,062 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs', '5 of Hearts'] |
-| 2024-11-17 12:16:48,062 | INFO | Broadcasted: Pile: ['Ace of Clubs', '2 of Clubs', '6 of Clubs', 'Jack of Clubs', '5 of Hearts'] |
-| 2024-11-17 12:16:48,062 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:48,062 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:49,602 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:49,602 | INFO | Card Queen of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Pile: ['Queen of Spades'] |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Pile: ['Queen of Spades'] |
-| 2024-11-17 12:16:49,603 | INFO | Face card Queen of Spades played. Next player must play 2 card(s). |
-| 2024-11-17 12:16:49,603 | INFO | Card 4 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Pile: ['Queen of Spades', '4 of Hearts'] |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Pile: ['Queen of Spades', '4 of Hearts'] |
-| 2024-11-17 12:16:49,603 | INFO | Card 3 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Pile: ['Queen of Spades', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Pile: ['Queen of Spades', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:49,603 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:50,508 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:50,508 | INFO | Card 10 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:50,509 | INFO | Broadcasted: Pile: ['10 of Diamonds'] |
-| 2024-11-17 12:16:50,509 | INFO | Broadcasted: Pile: ['10 of Diamonds'] |
-| 2024-11-17 12:16:51,346 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:51,346 | INFO | Card 9 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:51,346 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs'] |
-| 2024-11-17 12:16:51,347 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs'] |
-| 2024-11-17 12:16:52,165 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:52,165 | INFO | Card 10 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:52,165 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs'] |
-| 2024-11-17 12:16:52,165 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs'] |
-| 2024-11-17 12:16:53,026 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:53,026 | INFO | Card Queen of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:16:53,026 | INFO | Face card Queen of Hearts played. Next player must play 2 card(s). |
-| 2024-11-17 12:16:53,026 | INFO | Card 8 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts', '8 of Spades'] |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts', '8 of Spades'] |
-| 2024-11-17 12:16:53,026 | INFO | Card King of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Pile: ['10 of Diamonds', '9 of Clubs', '10 of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:16:53,026 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:53,027 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:53,959 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:53,959 | INFO | Card Ace of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts'] |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts'] |
-| 2024-11-17 12:16:53,959 | INFO | Face card Ace of Hearts played. Next player must play 4 card(s). |
-| 2024-11-17 12:16:53,959 | INFO | Card 6 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds'] |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds'] |
-| 2024-11-17 12:16:53,959 | INFO | Card Ace of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades'] |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades'] |
-| 2024-11-17 12:16:53,959 | INFO | Card Queen of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:53,959 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds'] |
-| 2024-11-17 12:16:53,960 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds'] |
-| 2024-11-17 12:16:53,960 | INFO | Card 9 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:53,960 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:16:53,960 | INFO | Broadcasted: Pile: ['Ace of Hearts', '6 of Diamonds', 'Ace of Spades', 'Queen of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:16:53,960 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:53,960 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:54,707 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:54,707 | INFO | Card 8 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:16:54,707 | INFO | Broadcasted: Pile: ['8 of Clubs'] |
-| 2024-11-17 12:16:54,707 | INFO | Broadcasted: Pile: ['8 of Clubs'] |
-| 2024-11-17 12:16:55,582 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:55,582 | INFO | Card 7 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:55,582 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades'] |
-| 2024-11-17 12:16:55,582 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades'] |
-| 2024-11-17 12:16:56,344 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:56,344 | INFO | Card 10 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:56,345 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts'] |
-| 2024-11-17 12:16:56,345 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts'] |
-| 2024-11-17 12:16:56,985 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:56,985 | INFO | Card 3 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:56,985 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds'] |
-| 2024-11-17 12:16:56,985 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds'] |
-| 2024-11-17 12:16:57,533 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:57,534 | INFO | Card King of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:57,534 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts'] |
-| 2024-11-17 12:16:57,534 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts'] |
-| 2024-11-17 12:16:57,535 | INFO | Face card King of Hearts played. Next player must play 3 card(s). |
-| 2024-11-17 12:16:57,535 | INFO | Card King of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:57,535 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades'] |
-| 2024-11-17 12:16:57,536 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades'] |
-| 2024-11-17 12:16:57,536 | INFO | Card Jack of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:16:57,536 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades', 'Jack of Hearts'] |
-| 2024-11-17 12:16:57,536 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades', 'Jack of Hearts'] |
-| 2024-11-17 12:16:57,537 | INFO | Card 3 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:16:57,537 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:16:57,537 | INFO | Broadcasted: Pile: ['8 of Clubs', '7 of Spades', '10 of Hearts', '3 of Diamonds', 'King of Hearts', 'King of Spades', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:16:57,538 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:57,538 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:16:58,606 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:58,607 | INFO | Card King of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds'] |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds'] |
-| 2024-11-17 12:16:58,607 | INFO | Face card King of Diamonds played. Next player must play 3 card(s). |
-| 2024-11-17 12:16:58,607 | INFO | Card 6 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:16:58,607 | INFO | Card 8 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts'] |
-| 2024-11-17 12:16:58,607 | INFO | Card 4 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Pile: ['King of Diamonds', '6 of Spades', '8 of Hearts', '4 of Diamonds'] |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:58,607 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:16:59,204 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:16:59,204 | INFO | Card 2 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:16:59,205 | INFO | Broadcasted: Pile: ['2 of Spades'] |
-| 2024-11-17 12:16:59,205 | INFO | Broadcasted: Pile: ['2 of Spades'] |
-| 2024-11-17 12:16:59,939 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:16:59,939 | INFO | Card 5 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:16:59,939 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds'] |
-| 2024-11-17 12:16:59,939 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds'] |
-| 2024-11-17 12:17:00,685 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:00,685 | INFO | Card 2 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:00,685 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds'] |
-| 2024-11-17 12:17:00,685 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds'] |
-| 2024-11-17 12:17:02,451 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:02,451 | INFO | Card Jack of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:02,451 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds', 'Jack of Diamonds'] |
-| 2024-11-17 12:17:02,451 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds', 'Jack of Diamonds'] |
-| 2024-11-17 12:17:02,451 | INFO | Face card Jack of Diamonds played. Next player must play 1 card(s). |
-| 2024-11-17 12:17:02,451 | INFO | Card Ace of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:02,451 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds', 'Jack of Diamonds', 'Ace of Diamonds'] |
-| 2024-11-17 12:17:02,451 | INFO | Broadcasted: Pile: ['2 of Spades', '5 of Diamonds', '2 of Diamonds', 'Jack of Diamonds', 'Ace of Diamonds'] |
-| 2024-11-17 12:17:02,451 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:02,451 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:03,413 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:03,413 | INFO | Card 2 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:03,414 | INFO | Broadcasted: Pile: ['2 of Hearts'] |
-| 2024-11-17 12:17:03,414 | INFO | Broadcasted: Pile: ['2 of Hearts'] |
-| 2024-11-17 12:17:04,479 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:04,479 | INFO | Card 6 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:17:04,480 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts'] |
-| 2024-11-17 12:17:04,480 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts'] |
-| 2024-11-17 12:17:05,490 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:05,490 | INFO | Card 4 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:05,490 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:17:05,490 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs'] |
-| 2024-11-17 12:17:06,885 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:06,885 | INFO | Card 7 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:17:06,885 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts'] |
-| 2024-11-17 12:17:06,886 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts'] |
-| 2024-11-17 12:17:08,202 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:08,203 | INFO | Card 7 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:08,203 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs'] |
-| 2024-11-17 12:17:08,203 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs'] |
-| 2024-11-17 12:17:09,590 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:09,590 | INFO | Card Jack of Spades added to the pile from Player 2. |
-| 2024-11-17 12:17:09,590 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs', 'Jack of Spades'] |
-| 2024-11-17 12:17:09,591 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs', 'Jack of Spades'] |
-| 2024-11-17 12:17:09,591 | INFO | Face card Jack of Spades played. Next player must play 1 card(s). |
-| 2024-11-17 12:17:09,591 | INFO | Card 3 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:09,592 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs', 'Jack of Spades', '3 of Hearts'] |
-| 2024-11-17 12:17:09,592 | INFO | Broadcasted: Pile: ['2 of Hearts', '6 of Hearts', '4 of Clubs', '7 of Hearts', '7 of Clubs', 'Jack of Spades', '3 of Hearts'] |
-| 2024-11-17 12:17:09,592 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:09,592 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:10,829 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:10,829 | INFO | Card 5 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:10,830 | INFO | Broadcasted: Pile: ['5 of Spades'] |
-| 2024-11-17 12:17:10,830 | INFO | Broadcasted: Pile: ['5 of Spades'] |
-| 2024-11-17 12:17:11,874 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:11,875 | INFO | Card 8 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:11,875 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:17:11,875 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:17:13,975 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:13,975 | INFO | Card 5 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:13,975 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs'] |
-| 2024-11-17 12:17:13,975 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs'] |
-| 2024-11-17 12:17:15,419 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:15,419 | INFO | Card 9 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:15,419 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds'] |
-| 2024-11-17 12:17:15,419 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds'] |
-| 2024-11-17 12:17:17,577 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:17,578 | INFO | Card Queen of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades'] |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades'] |
-| 2024-11-17 12:17:17,578 | INFO | Face card Queen of Spades played. Next player must play 2 card(s). |
-| 2024-11-17 12:17:17,578 | INFO | Card 7 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades', '7 of Diamonds'] |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades', '7 of Diamonds'] |
-| 2024-11-17 12:17:17,578 | INFO | Card 10 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades', '7 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Pile: ['5 of Spades', '8 of Diamonds', '5 of Clubs', '9 of Diamonds', 'Queen of Spades', '7 of Diamonds', '10 of Spades'] |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:17:17,578 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:17:19,115 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:19,115 | INFO | Card Queen of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:17:19,123 | INFO | Broadcasted: Pile: ['Queen of Clubs'] |
-| 2024-11-17 12:17:19,123 | INFO | Broadcasted: Pile: ['Queen of Clubs'] |
-| 2024-11-17 12:17:19,124 | INFO | Face card Queen of Clubs played. Next player must play 2 card(s). |
-| 2024-11-17 12:17:19,124 | INFO | Card 4 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:19,124 | INFO | Broadcasted: Pile: ['Queen of Clubs', '4 of Hearts'] |
-| 2024-11-17 12:17:19,125 | INFO | Broadcasted: Pile: ['Queen of Clubs', '4 of Hearts'] |
-| 2024-11-17 12:17:19,125 | INFO | Card 3 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:19,125 | INFO | Broadcasted: Pile: ['Queen of Clubs', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:17:19,125 | INFO | Broadcasted: Pile: ['Queen of Clubs', '4 of Hearts', '3 of Clubs'] |
-| 2024-11-17 12:17:19,126 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:19,126 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:22,282 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:22,282 | INFO | Card 10 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:22,282 | INFO | Broadcasted: Pile: ['10 of Diamonds'] |
-| 2024-11-17 12:17:22,283 | INFO | Broadcasted: Pile: ['10 of Diamonds'] |
-| 2024-11-17 12:17:23,363 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:23,364 | INFO | Card 4 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:17:23,364 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades'] |
-| 2024-11-17 12:17:23,365 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades'] |
-| 2024-11-17 12:17:24,608 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:24,609 | INFO | Card 9 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:24,609 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs'] |
-| 2024-11-17 12:17:24,609 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs'] |
-| 2024-11-17 12:17:26,316 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:26,316 | INFO | Card 9 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:17:26,316 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts'] |
-| 2024-11-17 12:17:26,316 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts'] |
-| 2024-11-17 12:17:27,271 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:27,272 | INFO | Card 10 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:27,272 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs'] |
-| 2024-11-17 12:17:27,272 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs'] |
-| 2024-11-17 12:17:28,111 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:28,112 | INFO | Card Ace of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:17:28,112 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs'] |
-| 2024-11-17 12:17:28,112 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs'] |
-| 2024-11-17 12:17:28,113 | INFO | Face card Ace of Clubs played. Next player must play 4 card(s). |
-| 2024-11-17 12:17:28,113 | INFO | Card Queen of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:28,113 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:17:28,113 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts'] |
-| 2024-11-17 12:17:28,114 | INFO | Card 8 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:28,114 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades'] |
-| 2024-11-17 12:17:28,114 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades'] |
-| 2024-11-17 12:17:28,115 | INFO | Card King of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:28,115 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:17:28,115 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs'] |
-| 2024-11-17 12:17:28,115 | INFO | Card 8 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:28,116 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs', '8 of Clubs'] |
-| 2024-11-17 12:17:28,116 | INFO | Broadcasted: Pile: ['10 of Diamonds', '4 of Spades', '9 of Clubs', '9 of Hearts', '10 of Clubs', 'Ace of Clubs', 'Queen of Hearts', '8 of Spades', 'King of Clubs', '8 of Clubs'] |
-| 2024-11-17 12:17:28,116 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:28,116 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:29,229 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:29,229 | INFO | Card 7 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:29,230 | INFO | Broadcasted: Pile: ['7 of Spades'] |
-| 2024-11-17 12:17:29,230 | INFO | Broadcasted: Pile: ['7 of Spades'] |
-| 2024-11-17 12:17:30,225 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:30,225 | INFO | Card 2 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:17:30,225 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs'] |
-| 2024-11-17 12:17:30,225 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs'] |
-| 2024-11-17 12:17:30,964 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:30,965 | INFO | Card 10 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:30,965 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts'] |
-| 2024-11-17 12:17:30,965 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts'] |
-| 2024-11-17 12:17:31,799 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:31,799 | INFO | Card 6 of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:17:31,800 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs'] |
-| 2024-11-17 12:17:31,800 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs'] |
-| 2024-11-17 12:17:32,488 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:32,488 | INFO | Card 3 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:32,489 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds'] |
-| 2024-11-17 12:17:32,489 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds'] |
-| 2024-11-17 12:17:33,115 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:33,116 | INFO | Card Jack of Clubs added to the pile from Player 2. |
-| 2024-11-17 12:17:33,116 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds', 'Jack of Clubs'] |
-| 2024-11-17 12:17:33,116 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds', 'Jack of Clubs'] |
-| 2024-11-17 12:17:33,117 | INFO | Face card Jack of Clubs played. Next player must play 1 card(s). |
-| 2024-11-17 12:17:33,117 | INFO | Card King of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:33,117 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds', 'Jack of Clubs', 'King of Hearts'] |
-| 2024-11-17 12:17:33,117 | INFO | Broadcasted: Pile: ['7 of Spades', '2 of Clubs', '10 of Hearts', '6 of Clubs', '3 of Diamonds', 'Jack of Clubs', 'King of Hearts'] |
-| 2024-11-17 12:17:33,118 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:33,118 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:33,833 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:33,833 | INFO | Card King of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:33,833 | INFO | Broadcasted: Pile: ['King of Spades'] |
-| 2024-11-17 12:17:33,833 | INFO | Broadcasted: Pile: ['King of Spades'] |
-| 2024-11-17 12:17:33,833 | INFO | Face card King of Spades played. Next player must play 3 card(s). |
-| 2024-11-17 12:17:33,833 | INFO | Card 5 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:17:33,833 | INFO | Broadcasted: Pile: ['King of Spades', '5 of Hearts'] |
-| 2024-11-17 12:17:33,833 | INFO | Broadcasted: Pile: ['King of Spades', '5 of Hearts'] |
-| 2024-11-17 12:17:33,833 | INFO | Card Ace of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:17:33,833 | INFO | Broadcasted: Pile: ['King of Spades', '5 of Hearts', 'Ace of Hearts'] |
-| 2024-11-17 12:17:33,833 | INFO | Broadcasted: Pile: ['King of Spades', '5 of Hearts', 'Ace of Hearts'] |
-| 2024-11-17 12:17:33,833 | INFO | Card 6 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:33,834 | INFO | Broadcasted: Pile: ['King of Spades', '5 of Hearts', 'Ace of Hearts', '6 of Diamonds'] |
-| 2024-11-17 12:17:33,834 | INFO | Broadcasted: Pile: ['King of Spades', '5 of Hearts', 'Ace of Hearts', '6 of Diamonds'] |
-| 2024-11-17 12:17:33,834 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:17:33,834 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
-| 2024-11-17 12:17:34,467 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:34,467 | INFO | Card Ace of Spades added to the pile from Player 2. |
-| 2024-11-17 12:17:34,467 | INFO | Broadcasted: Pile: ['Ace of Spades'] |
-| 2024-11-17 12:17:34,467 | INFO | Broadcasted: Pile: ['Ace of Spades'] |
-| 2024-11-17 12:17:34,467 | INFO | Face card Ace of Spades played. Next player must play 4 card(s). |
-| 2024-11-17 12:17:34,467 | INFO | Card Jack of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:34,467 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts'] |
-| 2024-11-17 12:17:34,467 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts'] |
-| 2024-11-17 12:17:34,467 | INFO | Card 3 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:34,467 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:17:34,467 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades'] |
-| 2024-11-17 12:17:34,468 | INFO | Card 5 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:34,468 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades', '5 of Spades'] |
-| 2024-11-17 12:17:34,468 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades', '5 of Spades'] |
-| 2024-11-17 12:17:34,468 | INFO | Card 8 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:34,468 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades', '5 of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:17:34,468 | INFO | Broadcasted: Pile: ['Ace of Spades', 'Jack of Hearts', '3 of Spades', '5 of Spades', '8 of Diamonds'] |
-| 2024-11-17 12:17:34,468 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:34,468 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:35,137 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:35,137 | INFO | Card 5 of Clubs added to the pile from Player 1. |
-| 2024-11-17 12:17:35,137 | INFO | Broadcasted: Pile: ['5 of Clubs'] |
-| 2024-11-17 12:17:35,138 | INFO | Broadcasted: Pile: ['5 of Clubs'] |
-| 2024-11-17 12:17:36,004 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:36,004 | INFO | Card Queen of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:36,004 | INFO | Broadcasted: Pile: ['5 of Clubs', 'Queen of Diamonds'] |
-| 2024-11-17 12:17:36,004 | INFO | Broadcasted: Pile: ['5 of Clubs', 'Queen of Diamonds'] |
-| 2024-11-17 12:17:36,004 | INFO | Face card Queen of Diamonds played. Next player must play 2 card(s). |
-| 2024-11-17 12:17:36,004 | INFO | Card 9 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:36,004 | INFO | Broadcasted: Pile: ['5 of Clubs', 'Queen of Diamonds', '9 of Diamonds'] |
-| 2024-11-17 12:17:36,004 | INFO | Broadcasted: Pile: ['5 of Clubs', 'Queen of Diamonds', '9 of Diamonds'] |
-| 2024-11-17 12:17:36,004 | INFO | Card Queen of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:36,005 | INFO | Broadcasted: Pile: ['5 of Clubs', 'Queen of Diamonds', '9 of Diamonds', 'Queen of Spades'] |
-| 2024-11-17 12:17:36,005 | INFO | Broadcasted: Pile: ['5 of Clubs', 'Queen of Diamonds', '9 of Diamonds', 'Queen of Spades'] |
-| 2024-11-17 12:17:36,005 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:36,005 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:36,887 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:36,888 | INFO | Card 7 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:36,888 | INFO | Broadcasted: Pile: ['7 of Diamonds'] |
-| 2024-11-17 12:17:36,888 | INFO | Broadcasted: Pile: ['7 of Diamonds'] |
-| 2024-11-17 12:17:37,515 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:37,515 | INFO | Card 9 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:17:37,515 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:17:37,516 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades'] |
-| 2024-11-17 12:17:39,557 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:39,558 | INFO | Card 10 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:39,558 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades'] |
-| 2024-11-17 12:17:39,558 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades'] |
-| 2024-11-17 12:17:40,675 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:40,675 | INFO | Card King of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:40,675 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds'] |
-| 2024-11-17 12:17:40,676 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds'] |
-| 2024-11-17 12:17:40,676 | INFO | Face card King of Diamonds played. Next player must play 3 card(s). |
-| 2024-11-17 12:17:40,676 | INFO | Card King of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:40,677 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades'] |
-| 2024-11-17 12:17:40,677 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades'] |
-| 2024-11-17 12:17:40,677 | INFO | Card 5 of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:40,677 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades', '5 of Hearts'] |
-| 2024-11-17 12:17:40,678 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades', '5 of Hearts'] |
-| 2024-11-17 12:17:40,678 | INFO | Card Ace of Hearts added to the pile from Player 1. |
-| 2024-11-17 12:17:40,678 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades', '5 of Hearts', 'Ace of Hearts'] |
-| 2024-11-17 12:17:40,678 | INFO | Broadcasted: Pile: ['7 of Diamonds', '9 of Spades', '10 of Spades', 'King of Diamonds', 'King of Spades', '5 of Hearts', 'Ace of Hearts'] |
-| 2024-11-17 12:17:40,678 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:40,678 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
-| 2024-11-17 12:17:42,097 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:42,097 | INFO | Card 6 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:42,097 | INFO | Broadcasted: Pile: ['6 of Diamonds'] |
-| 2024-11-17 12:17:42,097 | INFO | Broadcasted: Pile: ['6 of Diamonds'] |
-| 2024-11-17 12:17:42,896 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:42,896 | INFO | Card 6 of Spades added to the pile from Player 2. |
-| 2024-11-17 12:17:42,897 | INFO | Broadcasted: Pile: ['6 of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:17:42,897 | INFO | Broadcasted: Pile: ['6 of Diamonds', '6 of Spades'] |
-| 2024-11-17 12:17:43,906 | INFO | Received from ('127.0.0.1', 50496): slap deck |
-| 2024-11-17 12:17:43,906 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:17:43,906 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
-| 2024-11-17 12:17:43,907 | INFO | Player 1 made a valid slap and took the pile. |
-| 2024-11-17 12:17:44,645 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:44,645 | INFO | Card 6 of Diamonds added to the pile from Player 1. |
-| 2024-11-17 12:17:44,645 | INFO | Broadcasted: Pile: ['6 of Diamonds'] |
-| 2024-11-17 12:17:44,645 | INFO | Broadcasted: Pile: ['6 of Diamonds'] |
-| 2024-11-17 12:17:46,916 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:46,916 | INFO | Card 8 of Hearts added to the pile from Player 2. |
-| 2024-11-17 12:17:46,917 | INFO | Broadcasted: Pile: ['6 of Diamonds', '8 of Hearts'] |
-| 2024-11-17 12:17:46,917 | INFO | Broadcasted: Pile: ['6 of Diamonds', '8 of Hearts'] |
-| 2024-11-17 12:17:47,955 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:47,956 | INFO | Card 6 of Spades added to the pile from Player 1. |
-| 2024-11-17 12:17:47,956 | INFO | Broadcasted: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades'] |
-| 2024-11-17 12:17:47,956 | INFO | Broadcasted: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades'] |
-| 2024-11-17 12:17:48,895 | INFO | Received from ('127.0.0.1', 50508): Turn taken |
-| 2024-11-17 12:17:48,896 | INFO | Card 4 of Diamonds added to the pile from Player 2. |
-| 2024-11-17 12:17:48,896 | INFO | Broadcasted: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades', '4 of Diamonds'] |
-| 2024-11-17 12:17:48,897 | INFO | Broadcasted: Pile: ['6 of Diamonds', '8 of Hearts', '6 of Spades', '4 of Diamonds'] |
-| 2024-11-17 12:17:50,616 | INFO | Received from ('127.0.0.1', 50496): Turn taken |
-| 2024-11-17 12:17:50,616 | INFO | Player 2 has won the game. |
-| 2024-11-17 12:17:50,616 | INFO | Server socket closed after game over. |
+| 2024-11-17 13:30:29,016 | INFO | Server listening on 127.0.0.1:5555 |
+| 2024-11-17 13:30:31,407 | INFO | Client ('127.0.0.1', 50966) connected. |
+| 2024-11-17 13:30:33,934 | INFO | Client ('127.0.0.1', 50970) connected. |
+| 2024-11-17 13:30:33,935 | INFO | Hands dealt to all players. |
+| 2024-11-17 13:30:33,935 | INFO | Game has started. |
+| 2024-11-17 13:30:37,898 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:30:37,898 | INFO | Card Ace of Spades added to the pile from Player 2. |
+| 2024-11-17 13:30:37,899 | INFO | Broadcasted: Pile: ['Ace of Spades'] |
+| 2024-11-17 13:30:37,899 | INFO | Broadcasted: Pile: ['Ace of Spades'] |
+| 2024-11-17 13:30:37,899 | INFO | Face card Ace of Spades played. Next player must play 4 card(s). |
+| 2024-11-17 13:30:37,899 | INFO | Broadcasted: Player 1 must play 4 card(s) due to face card rule. |
+| 2024-11-17 13:30:37,900 | INFO | Broadcasted: Player 1 must play 4 card(s) due to face card rule. |
+| 2024-11-17 13:30:39,949 | INFO | Received from ('127.0.0.1', 50966): face card turn taken |
+| 2024-11-17 13:30:39,949 | INFO | Card King of Hearts added to pile from Player 1 during face card round. |
+| 2024-11-17 13:30:39,950 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts'] | 3 card(s) left to play. |
+| 2024-11-17 13:30:39,950 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts'] | 3 card(s) left to play. |
+| 2024-11-17 13:30:41,437 | INFO | Received from ('127.0.0.1', 50966): face card turn taken |
+| 2024-11-17 13:30:41,437 | INFO | Card 7 of Hearts added to pile from Player 1 during face card round. |
+| 2024-11-17 13:30:41,438 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts', '7 of Hearts'] | 2 card(s) left to play. |
+| 2024-11-17 13:30:41,438 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts', '7 of Hearts'] | 2 card(s) left to play. |
+| 2024-11-17 13:30:42,648 | INFO | Received from ('127.0.0.1', 50966): face card turn taken |
+| 2024-11-17 13:30:42,648 | INFO | Card 2 of Clubs added to pile from Player 1 during face card round. |
+| 2024-11-17 13:30:42,649 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts', '7 of Hearts', '2 of Clubs'] | 1 card(s) left to play. |
+| 2024-11-17 13:30:42,649 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts', '7 of Hearts', '2 of Clubs'] | 1 card(s) left to play. |
+| 2024-11-17 13:30:43,631 | INFO | Received from ('127.0.0.1', 50966): face card turn taken |
+| 2024-11-17 13:30:43,631 | INFO | Card 4 of Clubs added to pile from Player 1 during face card round. |
+| 2024-11-17 13:30:43,631 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts', '7 of Hearts', '2 of Clubs', '4 of Clubs'] | 0 card(s) left to play. |
+| 2024-11-17 13:30:43,632 | INFO | Broadcasted: Pile: ['Ace of Spades', 'King of Hearts', '7 of Hearts', '2 of Clubs', '4 of Clubs'] | 0 card(s) left to play. |
+| 2024-11-17 13:30:43,632 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
+| 2024-11-17 13:30:43,632 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
+| 2024-11-17 13:30:47,127 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:30:47,128 | INFO | Card 8 of Hearts added to the pile from Player 1. |
+| 2024-11-17 13:30:47,128 | INFO | Broadcasted: Pile: ['8 of Hearts'] |
+| 2024-11-17 13:30:47,128 | INFO | Broadcasted: Pile: ['8 of Hearts'] |
+| 2024-11-17 13:30:48,608 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:30:48,608 | INFO | Card 4 of Spades added to the pile from Player 2. |
+| 2024-11-17 13:30:48,609 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades'] |
+| 2024-11-17 13:30:48,609 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades'] |
+| 2024-11-17 13:30:49,883 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:30:49,884 | INFO | Card 10 of Clubs added to the pile from Player 1. |
+| 2024-11-17 13:30:49,884 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs'] |
+| 2024-11-17 13:30:49,884 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs'] |
+| 2024-11-17 13:30:51,606 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:30:51,606 | INFO | Card 9 of Hearts added to the pile from Player 2. |
+| 2024-11-17 13:30:51,607 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts'] |
+| 2024-11-17 13:30:51,607 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts'] |
+| 2024-11-17 13:30:53,450 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:30:53,459 | INFO | Card 8 of Clubs added to the pile from Player 1. |
+| 2024-11-17 13:30:53,459 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts', '8 of Clubs'] |
+| 2024-11-17 13:30:53,459 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts', '8 of Clubs'] |
+| 2024-11-17 13:30:54,947 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:30:54,947 | INFO | Card 6 of Clubs added to the pile from Player 2. |
+| 2024-11-17 13:30:54,948 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts', '8 of Clubs', '6 of Clubs'] |
+| 2024-11-17 13:30:54,948 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts', '8 of Clubs', '6 of Clubs'] |
+| 2024-11-17 13:30:56,299 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:30:56,299 | INFO | Card 6 of Spades added to the pile from Player 1. |
+| 2024-11-17 13:30:56,300 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts', '8 of Clubs', '6 of Clubs', '6 of Spades'] |
+| 2024-11-17 13:30:56,300 | INFO | Broadcasted: Pile: ['8 of Hearts', '4 of Spades', '10 of Clubs', '9 of Hearts', '8 of Clubs', '6 of Clubs', '6 of Spades'] |
+| 2024-11-17 13:30:58,770 | INFO | Received from ('127.0.0.1', 50970): slap deck |
+| 2024-11-17 13:30:58,778 | INFO | Broadcasted: Player 2 made a valid slap. The pile is now empty. |
+| 2024-11-17 13:30:58,778 | INFO | Broadcasted: Player 2 made a valid slap. The pile is now empty. |
+| 2024-11-17 13:30:58,778 | INFO | Player 2 made a valid slap and took the pile. |
+| 2024-11-17 13:31:00,501 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:00,501 | INFO | Card 3 of Clubs added to the pile from Player 2. |
+| 2024-11-17 13:31:00,501 | INFO | Broadcasted: Pile: ['3 of Clubs'] |
+| 2024-11-17 13:31:00,501 | INFO | Broadcasted: Pile: ['3 of Clubs'] |
+| 2024-11-17 13:31:02,687 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:31:02,687 | INFO | Card 4 of Hearts added to the pile from Player 1. |
+| 2024-11-17 13:31:02,687 | INFO | Broadcasted: Pile: ['3 of Clubs', '4 of Hearts'] |
+| 2024-11-17 13:31:02,688 | INFO | Broadcasted: Pile: ['3 of Clubs', '4 of Hearts'] |
+| 2024-11-17 13:31:03,805 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:03,805 | INFO | Card Jack of Spades added to the pile from Player 2. |
+| 2024-11-17 13:31:03,806 | INFO | Broadcasted: Pile: ['3 of Clubs', '4 of Hearts', 'Jack of Spades'] |
+| 2024-11-17 13:31:03,806 | INFO | Broadcasted: Pile: ['3 of Clubs', '4 of Hearts', 'Jack of Spades'] |
+| 2024-11-17 13:31:03,806 | INFO | Face card Jack of Spades played. Next player must play 1 card(s). |
+| 2024-11-17 13:31:03,806 | INFO | Broadcasted: Player 1 must play 1 card(s) due to face card rule. |
+| 2024-11-17 13:31:03,807 | INFO | Broadcasted: Player 1 must play 1 card(s) due to face card rule. |
+| 2024-11-17 13:31:06,682 | INFO | Received from ('127.0.0.1', 50966): face card turn taken |
+| 2024-11-17 13:31:06,682 | INFO | Card Jack of Diamonds added to pile from Player 1 during face card round. |
+| 2024-11-17 13:31:06,682 | INFO | Broadcasted: Pile: ['3 of Clubs', '4 of Hearts', 'Jack of Spades', 'Jack of Diamonds'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:06,683 | INFO | Broadcasted: Pile: ['3 of Clubs', '4 of Hearts', 'Jack of Spades', 'Jack of Diamonds'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:06,684 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
+| 2024-11-17 13:31:06,684 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
+| 2024-11-17 13:31:10,314 | INFO | Received from ('127.0.0.1', 50966): slap deck |
+| 2024-11-17 13:31:10,314 | INFO | Player 1 attempted an invalid slap. |
+| 2024-11-17 13:31:13,919 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:31:13,919 | INFO | Card King of Spades added to the pile from Player 1. |
+| 2024-11-17 13:31:13,919 | INFO | Broadcasted: Pile: ['King of Spades'] |
+| 2024-11-17 13:31:13,920 | INFO | Broadcasted: Pile: ['King of Spades'] |
+| 2024-11-17 13:31:13,920 | INFO | Face card King of Spades played. Next player must play 3 card(s). |
+| 2024-11-17 13:31:13,920 | INFO | Broadcasted: Player 2 must play 3 card(s) due to face card rule. |
+| 2024-11-17 13:31:13,921 | INFO | Broadcasted: Player 2 must play 3 card(s) due to face card rule. |
+| 2024-11-17 13:31:15,990 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:15,991 | INFO | Card 2 of Spades added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:15,991 | INFO | Broadcasted: Pile: ['King of Spades', '2 of Spades'] | 2 card(s) left to play. |
+| 2024-11-17 13:31:15,991 | INFO | Broadcasted: Pile: ['King of Spades', '2 of Spades'] | 2 card(s) left to play. |
+| 2024-11-17 13:31:18,818 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:18,818 | INFO | Card 3 of Hearts added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:18,818 | INFO | Broadcasted: Pile: ['King of Spades', '2 of Spades', '3 of Hearts'] | 1 card(s) left to play. |
+| 2024-11-17 13:31:18,819 | INFO | Broadcasted: Pile: ['King of Spades', '2 of Spades', '3 of Hearts'] | 1 card(s) left to play. |
+| 2024-11-17 13:31:20,200 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:20,200 | INFO | Card Ace of Clubs added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:20,200 | INFO | Broadcasted: Pile: ['King of Spades', '2 of Spades', '3 of Hearts', 'Ace of Clubs'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:20,201 | INFO | Broadcasted: Pile: ['King of Spades', '2 of Spades', '3 of Hearts', 'Ace of Clubs'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:20,201 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
+| 2024-11-17 13:31:20,201 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
+| 2024-11-17 13:31:23,332 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:23,333 | INFO | Card Jack of Hearts added to the pile from Player 2. |
+| 2024-11-17 13:31:23,333 | INFO | Broadcasted: Pile: ['Jack of Hearts'] |
+| 2024-11-17 13:31:23,334 | INFO | Broadcasted: Pile: ['Jack of Hearts'] |
+| 2024-11-17 13:31:23,334 | INFO | Face card Jack of Hearts played. Next player must play 1 card(s). |
+| 2024-11-17 13:31:23,334 | INFO | Broadcasted: Player 1 must play 1 card(s) due to face card rule. |
+| 2024-11-17 13:31:23,334 | INFO | Broadcasted: Player 1 must play 1 card(s) due to face card rule. |
+| 2024-11-17 13:31:25,882 | INFO | Received from ('127.0.0.1', 50966): face card turn taken |
+| 2024-11-17 13:31:25,883 | INFO | Card 6 of Diamonds added to pile from Player 1 during face card round. |
+| 2024-11-17 13:31:25,883 | INFO | Broadcasted: Pile: ['Jack of Hearts', '6 of Diamonds'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:25,883 | INFO | Broadcasted: Pile: ['Jack of Hearts', '6 of Diamonds'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:25,883 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
+| 2024-11-17 13:31:25,884 | INFO | Broadcasted: Player 2 takes the pile after face card round. |
+| 2024-11-17 13:31:29,137 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:31:29,138 | INFO | Card 5 of Diamonds added to the pile from Player 1. |
+| 2024-11-17 13:31:29,138 | INFO | Broadcasted: Pile: ['5 of Diamonds'] |
+| 2024-11-17 13:31:29,138 | INFO | Broadcasted: Pile: ['5 of Diamonds'] |
+| 2024-11-17 13:31:33,623 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:33,623 | INFO | Card 9 of Spades added to the pile from Player 2. |
+| 2024-11-17 13:31:33,624 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades'] |
+| 2024-11-17 13:31:33,624 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades'] |
+| 2024-11-17 13:31:35,111 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:31:35,111 | INFO | Card 7 of Spades added to the pile from Player 1. |
+| 2024-11-17 13:31:35,111 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades', '7 of Spades'] |
+| 2024-11-17 13:31:35,111 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades', '7 of Spades'] |
+| 2024-11-17 13:31:36,364 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:36,365 | INFO | Card 4 of Diamonds added to the pile from Player 2. |
+| 2024-11-17 13:31:36,365 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades', '7 of Spades', '4 of Diamonds'] |
+| 2024-11-17 13:31:36,366 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades', '7 of Spades', '4 of Diamonds'] |
+| 2024-11-17 13:31:37,746 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:31:37,746 | INFO | Card 7 of Diamonds added to the pile from Player 1. |
+| 2024-11-17 13:31:37,746 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades', '7 of Spades', '4 of Diamonds', '7 of Diamonds'] |
+| 2024-11-17 13:31:37,746 | INFO | Broadcasted: Pile: ['5 of Diamonds', '9 of Spades', '7 of Spades', '4 of Diamonds', '7 of Diamonds'] |
+| 2024-11-17 13:31:40,232 | INFO | Received from ('127.0.0.1', 50966): slap deck |
+| 2024-11-17 13:31:40,233 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 13:31:40,241 | INFO | Broadcasted: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-17 13:31:40,242 | INFO | Player 1 made a valid slap and took the pile. |
+| 2024-11-17 13:31:42,354 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:42,355 | INFO | Card 7 of Clubs added to the pile from Player 2. |
+| 2024-11-17 13:31:42,355 | INFO | Broadcasted: Pile: ['7 of Clubs'] |
+| 2024-11-17 13:31:42,355 | INFO | Broadcasted: Pile: ['7 of Clubs'] |
+| 2024-11-17 13:31:49,027 | INFO | Received from ('127.0.0.1', 50966): turn taken |
+| 2024-11-17 13:31:49,027 | INFO | Card Ace of Diamonds added to the pile from Player 1. |
+| 2024-11-17 13:31:49,027 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds'] |
+| 2024-11-17 13:31:49,028 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds'] |
+| 2024-11-17 13:31:49,028 | INFO | Face card Ace of Diamonds played. Next player must play 4 card(s). |
+| 2024-11-17 13:31:49,028 | INFO | Broadcasted: Player 2 must play 4 card(s) due to face card rule. |
+| 2024-11-17 13:31:49,029 | INFO | Broadcasted: Player 2 must play 4 card(s) due to face card rule. |
+| 2024-11-17 13:31:51,610 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:51,611 | INFO | Card 6 of Hearts added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:51,611 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts'] | 3 card(s) left to play. |
+| 2024-11-17 13:31:51,611 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts'] | 3 card(s) left to play. |
+| 2024-11-17 13:31:53,114 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:53,114 | INFO | Card 3 of Diamonds added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:53,115 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts', '3 of Diamonds'] | 2 card(s) left to play. |
+| 2024-11-17 13:31:53,115 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts', '3 of Diamonds'] | 2 card(s) left to play. |
+| 2024-11-17 13:31:55,143 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:55,143 | INFO | Card Jack of Clubs added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:55,144 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts', '3 of Diamonds', 'Jack of Clubs'] | 1 card(s) left to play. |
+| 2024-11-17 13:31:55,144 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts', '3 of Diamonds', 'Jack of Clubs'] | 1 card(s) left to play. |
+| 2024-11-17 13:31:57,570 | INFO | Received from ('127.0.0.1', 50970): face card turn taken |
+| 2024-11-17 13:31:57,571 | INFO | Card 3 of Spades added to pile from Player 2 during face card round. |
+| 2024-11-17 13:31:57,571 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts', '3 of Diamonds', 'Jack of Clubs', '3 of Spades'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:57,571 | INFO | Broadcasted: Pile: ['7 of Clubs', 'Ace of Diamonds', '6 of Hearts', '3 of Diamonds', 'Jack of Clubs', '3 of Spades'] | 0 card(s) left to play. |
+| 2024-11-17 13:31:57,572 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
+| 2024-11-17 13:31:57,572 | INFO | Broadcasted: Player 1 takes the pile after face card round. |
+| 2024-11-17 13:31:59,344 | INFO | Received from ('127.0.0.1', 50970): turn taken |
+| 2024-11-17 13:31:59,344 | INFO | Card King of Clubs added to the pile from Player 2. |
+| 2024-11-17 13:31:59,345 | INFO | Broadcasted: Pile: ['King of Clubs'] |
+| 2024-11-17 13:31:59,345 | INFO | Broadcasted: Pile: ['King of Clubs'] |
+| 2024-11-17 13:31:59,345 | INFO | Face card King of Clubs played. Next player must play 3 card(s). |
+| 2024-11-17 13:31:59,346 | INFO | Broadcasted: Player 1 must play 3 card(s) due to face card rule. |
+| 2024-11-17 13:31:59,346 | INFO | Broadcasted: Player 1 must play 3 card(s) due to face card rule. |
+| 2024-11-17 13:32:01,452 | INFO | Received from ('127.0.0.1', 50970): shutdown |
+| 2024-11-17 13:32:01,453 | INFO | Shutdown requested by ('127.0.0.1', 50970). |
+| 2024-11-17 13:32:01,453 | INFO | Broadcasted: shutdown |
+| 2024-11-17 13:32:01,453 | INFO | Broadcasted: shutdown |
+| 2024-11-17 13:32:01,454 | INFO | Server shutting down. |
+| 2024-11-17 13:32:01,454 | INFO | Server socket closed. |
