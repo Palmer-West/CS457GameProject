@@ -106,7 +106,8 @@ def announce_turn():
             turn_button.config(state=tk.NORMAL)
         else:
             face_card_turn = False
-            turn_button.config(state=tk.DISABLED)
+            player_turn = False
+            turn_button.config(state=tk.NORMAL)
     else:
         text_area.config(state=tk.NORMAL)
         text_area.insert(tk.END, "It's not your turn. Please wait for your turn.\n")

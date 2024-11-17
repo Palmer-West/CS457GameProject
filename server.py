@@ -182,7 +182,15 @@ try:
                             logging.info(f"Card {card} added to pile from Player {clients.index(s) + 1} during face card round.")
                             broadcast_message(f"Pile: {[str(c) for c in pile]} | {cards_to_play} card(s) left to play.")
 
-                            if len(player_hands[s]) == 0:
+                            if is_face_card(card[0]):
+                                current_face_card = card[0]
+                                cards_to_play = face_card_count(current_face_card)
+                                initiating_player = s
+                                turn = clients[(clients.index(s) + 1) % len(clients)]
+                                turn.send(f"Your turn to play a card due to face card rule. Your have {cards_to_play} card(s) left.".encode('utf-8'))
+                                broadcast_message(f"Player {clients.index(turn) + 1} must play {cards_to_play} card(s) due to face card rule.")
+
+                            elif len(player_hands[s]) == 0:
                                 #winning condition
                                 winning_player = [c for c in clients if c != s][0]
                                 losing_player = s
@@ -198,7 +206,7 @@ try:
                                 logging.info("Server socket closed after game over.")
                                 exit()
 
-                            if cards_to_play > 0:
+                            elif cards_to_play > 0:
                                 s.send(f"Your turn to play a card due to face card rule. You have {cards_to_play} card(s) left.".encode('utf-8'))
                             else:
                                 initiating_player = clients[(clients.index(s) - 1) % len(clients)]
@@ -206,7 +214,7 @@ try:
                                 pile.clear()
                                 broadcast_message(f"Player {clients.index(initiating_player) + 1} takes the pile after face card round.")
                                 current_face_card = None
-                                turn = clients[(clients.index(initiating_player) + 1) % len(clients)]
+                                turn = initiating_player
                                 turn.send("Your turn.".encode('utf-8'))
                                 for client in clients:
                                     if client != turn:
