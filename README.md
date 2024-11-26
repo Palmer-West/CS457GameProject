@@ -7,8 +7,8 @@ This is a simple War Card Game game implemented using Python and sockets.
 4. **Chat with opponet:** Type a message in the text box above the 'send' button, when ready click the 'send' button to send your message to the other player
 
 **Current active slap rules:**
-    - Two in a row
-    - Sandwitch (two cards of the same rank are seperated by one and only one card)
+    **-** Two in a row
+    **-** Sandwitch (two cards of the same rank are seperated by one and only one card)
 
 If a player plays a face card then the other player must play the corresponding number of cards in response:
 Jack - 1 card
