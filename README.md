@@ -4,6 +4,11 @@ This is a simple War Card Game game implemented using Python and sockets.
 1. **Start the server:** Run the `server.py` script. Args: -p (server port)
 2. **Connect clients:** Run the `client.py` script on two different machines or terminals. Args: -i (server IP) -p (server port)
 3. **Play the game:** Players take turns flipping over the top card of thier deck. Players can "slap the deck" when a rule is met, ie: two cards of same rank in a row (doubles) or two cards of same rank are seperated by one and only one card (sandwitch).
+4. **Chat with opponet:** Type a message in the text box above the 'send' button, when ready click the 'send' button to send your message to the other player
+
+**Current active slap rules:**
+    - Two in a row
+    - Sandwitch (two cards of the same rank are seperated by one and only one card)
 
 If a player plays a face card then the other player must play the corresponding number of cards in response:
 Jack - 1 card
