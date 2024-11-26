@@ -39,6 +39,16 @@ slap_button = tk.Button(gui, text="Slap Deck", command=lambda: slap_deck())
 slap_button.pack(pady=5)
 slap_button.config(state=tk.NORMAL)
 
+chat_area = scrolledtext.ScrolledText(gui, wrap=tk.WORD, width=50, height=10)
+chat_area.pack(padx=10, pady=10)
+chat_area.config(state=tk.DISABLED)
+
+chat_entry = tk.Entry(gui, width=50)
+chat_entry.pack(padx=10, pady=5)
+
+send_button = tk.Button(gui, text="Send", command=lambda: send_chat_message())
+send_button.pack(pady=5)
+
 shutdown_event = threading.Event()
 player_turn = False
 face_card_turn = False
@@ -53,39 +63,53 @@ def receive_messages():
                 logging.info("Connection closed by server.")
                 break
             logging.info(f"Received: {message}")
-            text_area.config(state=tk.NORMAL)
-            text_area.insert(tk.END, message + '\n')
-            text_area.config(state=tk.DISABLED)
-            text_area.yview(tk.END)
-
-            if "Your turn" in message and "face card rule" not in message:
-                player_turn = True
-                turn_button.config(state=tk.NORMAL) 
-                logging.info("Player turn set to True")
-            elif "Your turn to play a card due to face card rule" in message:
-                face_card_turn = True
-                turn_button.config(state=tk.NORMAL)
-                logging.info("Face card turn set to True")
-                if "card(s) left" in message:
-                    match = re.search(r'You have (\d+) card\(s\) left', message)
-                    if match:
-                        cards_left_to_play = int(match.group(1)) - 1
-            elif "Wait for your turn" in message:
-                player_turn = False
-                face_card_turn = False
-                turn_button.config(state=tk.DISABLED) 
-                logging.info("Player turn set to False")
-            elif "Player" in message and "made a valid slap" in message:
+            
+            if message.startswith("CHAT:"):
+                chat_message = message[5:]
+                chat_area.config(state=tk.NORMAL)
+                chat_area.insert(tk.END, chat_message + "\n \n")
+                chat_area.config(state=tk.DISABLED)
+                chat_area.yview(tk.END)
+            else:
                 text_area.config(state=tk.NORMAL)
-                text_area.insert(tk.END, message + '\n')
+                text_area.insert(tk.END, message + "\n \n")
                 text_area.config(state=tk.DISABLED)
                 text_area.yview(tk.END)
-            elif "shutdown" in message:
-                shutdown_event.set()
-                gui.quit()
+
+                if "Your turn" in message and "face card rule" not in message:
+                    player_turn = True
+                    turn_button.config(state=tk.NORMAL) 
+                    logging.info("Player turn set to True")
+                elif "Your turn to play a card due to face card rule" in message:
+                    face_card_turn = True
+                    turn_button.config(state=tk.NORMAL)
+                    logging.info("Face card turn set to True")
+                    if "card(s) left" in message:
+                        match = re.search(r'You have (\d+) card\(s\) left', message)
+                        if match:
+                            cards_left_to_play = int(match.group(1)) - 1
+                elif "Wait for your turn" in message:
+                    player_turn = False
+                    face_card_turn = False
+                    turn_button.config(state=tk.DISABLED) 
+                    logging.info("Player turn set to False")
+                elif "Player" in message and "made a valid slap" in message:
+                    text_area.config(state=tk.NORMAL)
+                    text_area.insert(tk.END, message + '\n')
+                    text_area.config(state=tk.DISABLED)
+                    text_area.yview(tk.END)
+                elif "shutdown" in message:
+                    shutdown_event.set()
+                    gui.quit()
         except (ConnectionResetError, OSError):
             logging.error("Connection lost.")
             break
+
+def send_chat_message():
+    chat_message = chat_entry.get()
+    if chat_message.strip():
+        client_socket.send(f"CHAT:{chat_message}".encode('utf-8'))
+        chat_entry.delete(0, tk.END)
 
 def slap_deck():
     client_socket.send("slap deck".encode('utf-8'))

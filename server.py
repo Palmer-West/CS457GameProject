@@ -135,6 +135,12 @@ try:
                         handle_client_disconnect(s)
                         continue
                     logging.info(f"Received from {s.getpeername()}: {message}")
+                    if message.startswith("CHAT:"):
+                        chat_message = message[len("CHAT:"):]
+                        player_index = clients.index(s) + 1
+                        broadcast_message(f"CHAT:{chat_message}")
+                        continue
+                    
                     if message.lower() == "turn taken":
                         #check if player hand is empty
                         if len(player_hands[s]) == 0:

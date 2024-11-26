@@ -1,0 +1,40 @@
+| 2024-11-26 09:36:34,425 | INFO | Connected to the server. |
+| 2024-11-26 09:36:34,481 | INFO | Received: You are Player 2. Game is starting...Game starting. You go first. Your turn |
+| 2024-11-26 09:36:34,482 | INFO | Player turn set to True |
+| 2024-11-26 09:36:43,183 | INFO | Received: CHAT:hello world |
+| 2024-11-26 09:36:49,340 | INFO | Received: CHAT:ditto |
+| 2024-11-26 09:36:52,352 | INFO | Turn taken| 2024-11-26 09:36:52,353 | INFO | Received: Pile: ['5 of Clubs'] |
+| 2024-11-26 09:36:52,353 || 2024-11-26 09:36:52,355 | INF| 2024-11-26 09:36:52,355 | INFO | P| 2024-11-26 09:36:52,357| 2024-11-26 09:36:54,384 | INFO | Tu| 2024-11-26 09:36:54,393 | INFO | Received: Pile: ['5 of Clubs', 'Jack of Spades'] |
+| 2024-11-26 09:36:54,395 | INFO | | 2024-11-26 09:36:54,396 | INFO | Received: Player 2 must play 1 card(s) due to face card rule. |
+| 2024-11-26 09:36:58,395 | INFO | Received: Pile: ['5 of Clubs', 'Jack of Spades', '7 of Hearts'] | 0 card(s) left to play. |
+| 2024-11-26 09:36:58,397 | INFO | Received: Player 1 takes the pile after face card round.Your turn. |
+| 2024-11-26 09:36:58,403 | INFO | Player turn set to True |
+| 2024-11-26 09:37:03,516 | INFO | Turn taken message sent to server. |
+| 2024-11-26 09:37:03,517 | INFO | Received: Pile: ['9 of Hearts'] |
+| 2024-11-26 09:37:03,519 | INFO | Received: Wait for your turn. |
+| 2024-11-26 09:37:03,527 | INFO | Player turn set to False |
+| 2024-11-26 09:37:06,176 | INFO | Received: Pile: ['9 of Hearts', '5 of Diamonds'] |
+| 2024-11-26 09:37:06,178 | INFO | Received: Your turn. |
+| 2024-11-26 09:37:06,192 | INFO | Player turn set to True |
+| 2024-11-26 09:37:07,845 | INFO | Turn taken message sent to server. |
+| 2024-11-26 09:37:07,847 | INFO | Received: Pile: ['9 of Hearts', '5 of Diamonds', '2 of Spades'] |
+| 2024-11-26 09:37:07,848 | INFO | Received: Wait for your turn. |
+| 2024-11-26 09:37:07,856 | INFO | Player turn set to False |
+| 2024-11-26 09:37:10,861 | INFO | Received: Pile: ['9 of Hearts', '5 of Diamonds', '2 of Spades', '5 of Hearts'] |
+| 2024-11-26 09:37:10,864 | INFO | Received: Your turn. |
+| 2024-11-26 09:37:10,875 | INFO | Player turn set to True |
+| 2024-11-26 09:37:12,981 | INFO | Deck slapped message sent to server. |
+| 2024-11-26 09:37:12,982 | INFO | Received: Player 1 made a valid slap. The pile is now empty. |
+| 2024-11-26 09:37:12,988 | INFO | Received: Your hand has been updated. You now have 30 cards. |
+| 2024-11-26 09:37:16,179 | INFO | Turn taken message sent to server. |
+| 2024-11-26 09:37:16,180 | INFO | Received: Pile: ['| 2024-11-26 09:37| 2024-11-26 09:37:16,182 | INFO | Received: Player 2| 2024-11-26 09:37:16,182 | INFO | Received: Y| 2024-11-26 09:37:19,755 | INFO | Received: Pile: ['King of Clubs', 'Queen of Spades'] | 2 card(s) left to play. |
+| 2024-11-26 09:37:19,761 | INFO | Received: Your turn to play a card due to face card rule. Your have 2 card(s) left.Player 1 must play 2 card(s) due to face card rule. |
+| 2024-11-26 09:37:19,768 | INFO | Face card turn set to True |
+| 2024-11-26 09:37:27,608 | INFO | Face card turn taken message sent to server. |
+| 2024-11-26 09:37:27,610 | INFO | Received: Pile: ['King of Clubs', 'Queen of Spades', '10 of Clubs'] | 1 card(s) left to play. |
+| 2024-11-26 09:37:27,618 | INFO | Received: Your turn to play a card due to face card rule. You have 1 card(s) left. |
+| 2024-11-26 09:37:27,622 | INFO | Face card turn set to True |
+| 2024-11-26 09:37:29,060 | INFO | Face card tur| 2024-11-26 09:37:29,062 | INFO | Received: Pile: ['King of Clubs', 'Queen of Spades', '10 of Clubs', '7 of Spades'] | 0 card(s) left to play. |
+| 2024-11-26 09:37:29,065 | INFO || 2024-11-26 09:37:29,072 | INFO | Received: Player 2 takes the pile a| 2024-11-26 09:37:29,074 | INFO | Player | 2024-11-26 09:37:| 2024-11-26 09:37:36,064 | INFO | Received: shutdown |
+| 2024-11-26 09:37:36,071 | INFO | Client socket closed. |
+2024-11-26 09:37:36,064 | INFO | Client socket closed. |
