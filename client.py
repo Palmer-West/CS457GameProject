@@ -72,7 +72,7 @@ def receive_messages():
                 chat_area.yview(tk.END)
             else:
                 text_area.config(state=tk.NORMAL)
-                text_area.insert(tk.END, message + "\n \n")
+                text_area.insert(tk.END, message + "\n")
                 text_area.config(state=tk.DISABLED)
                 text_area.yview(tk.END)
 
@@ -95,7 +95,7 @@ def receive_messages():
                     logging.info("Player turn set to False")
                 elif "Player" in message and "made a valid slap" in message:
                     text_area.config(state=tk.NORMAL)
-                    text_area.insert(tk.END, message + '\n')
+                    text_area.insert(tk.END, message)
                     text_area.config(state=tk.DISABLED)
                     text_area.yview(tk.END)
                 elif "shutdown" in message:
@@ -117,6 +117,10 @@ def slap_deck():
 
 def announce_turn():
     global player_turn, face_card_turn, cards_left_to_play
+
+    if not player_turn:
+        turn_button.config(state=tk.DISABLED)
+
     if player_turn:
         client_socket.send("turn taken".encode('utf-8'))
         player_turn = False

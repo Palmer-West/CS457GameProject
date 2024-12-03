@@ -138,7 +138,7 @@ try:
                     if message.startswith("CHAT:"):
                         chat_message = message[len("CHAT:"):]
                         player_index = clients.index(s) + 1
-                        broadcast_message(f"CHAT:{chat_message}")
+                        broadcast_message(f"CHAT:Player {player_index}: {chat_message}")
                         continue
                     
                     if message.lower() == "turn taken":
@@ -169,6 +169,8 @@ try:
                             logging.info(f"Face card {current_face_card} played. Next player must play {cards_to_play} card(s).")
 
                             turn = clients[(clients.index(s) + 1) % len(clients)]
+                            clients[clients.index(s)].send("Wait for your turn. \n".encode('utf-8'))
+                            turn.send("Your turn. \n".encode('utf-8'))
                             turn.send("Your turn to play a card due to face card rule. Click 'Take Turn' to play each card. \n".encode('utf-8'))
                             broadcast_message(f"Player {clients.index(turn) + 1} must play {cards_to_play} card(s) due to face card rule.")
                         
@@ -232,11 +234,13 @@ try:
                             pile.clear()
 
                             broadcast_message(f"Player {clients.index(s) + 1} made a valid slap. The pile is now empty.")
+                            
                             s.send(f"Your hand has been updated. You now have {len(player_hands[s])} cards. \n".encode('utf-8'))
                             s.send("Your turn. \n".encode('utf-8'))
 
                             for client in clients:
                                 if client != s:
+                                    client.send("Wait for your turn. \n".encode('utf-8'))
                                     client.send(f"Player {clients.index(s) + 1} made a valid slap and took the pile. \n".encode('utf-8'))
 
                             logging.info(f"Player {clients.index(s) + 1} made a valid slap and took the pile.")
