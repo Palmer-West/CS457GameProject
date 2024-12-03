@@ -233,6 +233,7 @@ try:
 
                             broadcast_message(f"Player {clients.index(s) + 1} made a valid slap. The pile is now empty.")
                             s.send(f"Your hand has been updated. You now have {len(player_hands[s])} cards.".encode('utf-8'))
+                            s.send("Your turn.".encode('utf-8'))
 
                             for client in clients:
                                 if client != s:
