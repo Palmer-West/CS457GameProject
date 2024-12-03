@@ -195,6 +195,7 @@ try:
                                 cards_to_play = face_card_count(current_face_card)
                                 initiating_player = s
                                 turn = clients[(clients.index(s) + 1) % len(clients)]
+                                s.send("Wait for your turn. \n".encode('utf-8'))
                                 turn.send(f"Your turn to play a card due to face card rule. Your have {cards_to_play} card(s) left. \n".encode('utf-8'))
                                 broadcast_message(f"Player {clients.index(turn) + 1} must play {cards_to_play} card(s) due to face card rule.")
 
