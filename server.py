@@ -87,7 +87,7 @@ def face_card_count(card):
 def broadcast_message(message):
     for client in clients:
         try:
-            client.send(message.encode('utf-8'))
+            client.send((message + "\n").encode('utf-8'))
             logging.info(f"Broadcasted: {message}")
         except (BrokenPipeError, OSError):
             logging.error("Failed to send message to a client.")
@@ -169,15 +169,15 @@ try:
                             logging.info(f"Face card {current_face_card} played. Next player must play {cards_to_play} card(s).")
 
                             turn = clients[(clients.index(s) + 1) % len(clients)]
-                            turn.send("Your turn to play a card due to face card rule. Click 'Take Turn' to play each card.".encode('utf-8'))
+                            turn.send("Your turn to play a card due to face card rule. Click 'Take Turn' to play each card. \n".encode('utf-8'))
                             broadcast_message(f"Player {clients.index(turn) + 1} must play {cards_to_play} card(s) due to face card rule.")
                         
                         else:
                             turn = clients[(clients.index(s) + 1) % len(clients)]
-                            turn.send("Your turn.".encode('utf-8'))
+                            turn.send("Your turn. \n".encode('utf-8'))
                             for client in clients:
                                 if client != turn:
-                                    client.send("Wait for your turn.".encode('utf-8'))
+                                    client.send("Wait for your turn. \n".encode('utf-8'))
                     
 
                     elif message.lower() == "face card turn taken":
@@ -193,7 +193,7 @@ try:
                                 cards_to_play = face_card_count(current_face_card)
                                 initiating_player = s
                                 turn = clients[(clients.index(s) + 1) % len(clients)]
-                                turn.send(f"Your turn to play a card due to face card rule. Your have {cards_to_play} card(s) left.".encode('utf-8'))
+                                turn.send(f"Your turn to play a card due to face card rule. Your have {cards_to_play} card(s) left. \n".encode('utf-8'))
                                 broadcast_message(f"Player {clients.index(turn) + 1} must play {cards_to_play} card(s) due to face card rule.")
 
                             elif len(player_hands[s]) == 0:
@@ -201,8 +201,8 @@ try:
                                 winning_player = [c for c in clients if c != s][0]
                                 losing_player = s
 
-                                winning_player.send("Congradulations! You have won the game!".encode('utf-8'))
-                                losing_player.send("You have lost the game. Better luck next time!".encode('utf-8'))
+                                winning_player.send("Congradulations! You have won the game! \n".encode('utf-8'))
+                                losing_player.send("You have lost the game. Better luck next time! \n".encode('utf-8'))
 
                                 logging.info(f"Player {clients.index(winning_player) + 1} has won the game.")
 
@@ -213,7 +213,7 @@ try:
                                 exit()
 
                             elif cards_to_play > 0:
-                                s.send(f"Your turn to play a card due to face card rule. You have {cards_to_play} card(s) left.".encode('utf-8'))
+                                s.send(f"Your turn to play a card due to face card rule. You have {cards_to_play} card(s) left. \n".encode('utf-8'))
                             else:
                                 initiating_player = clients[(clients.index(s) - 1) % len(clients)]
                                 player_hands[initiating_player].add(pile, end=BOTTOM)
@@ -221,10 +221,10 @@ try:
                                 broadcast_message(f"Player {clients.index(initiating_player) + 1} takes the pile after face card round.")
                                 current_face_card = None
                                 turn = initiating_player
-                                turn.send("Your turn.".encode('utf-8'))
+                                turn.send("Your turn. \n".encode('utf-8'))
                                 for client in clients:
                                     if client != turn:
-                                        client.send("Wait for your turn".encode('utf-8'))
+                                        client.send("Wait for your turn \n".encode('utf-8'))
                             
                     elif message.lower() == "slap deck":
                         if is_valid_slap():
@@ -232,19 +232,19 @@ try:
                             pile.clear()
 
                             broadcast_message(f"Player {clients.index(s) + 1} made a valid slap. The pile is now empty.")
-                            s.send(f"Your hand has been updated. You now have {len(player_hands[s])} cards.".encode('utf-8'))
-                            s.send("Your turn.".encode('utf-8'))
+                            s.send(f"Your hand has been updated. You now have {len(player_hands[s])} cards. \n".encode('utf-8'))
+                            s.send("Your turn. \n".encode('utf-8'))
 
                             for client in clients:
                                 if client != s:
-                                    client.send(f"Player {clients.index(s) + 1} made a valid slap and took the pile.".encode('utf-8'))
+                                    client.send(f"Player {clients.index(s) + 1} made a valid slap and took the pile. \n".encode('utf-8'))
 
                             logging.info(f"Player {clients.index(s) + 1} made a valid slap and took the pile.")
                             current_face_card = None
                             cards_to_play = 0
 
                         else:
-                            s.send("Invalid slap.".encode("utf-8"))
+                            s.send("Invalid slap. \n".encode("utf-8"))
                             logging.info(f"Player {clients.index(s) + 1} attempted an invalid slap.")
 
                     elif message.lower() == "shutdown":
