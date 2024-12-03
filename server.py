@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--port', type=int, required=True, help='Port number for the server')
 args = parser.parse_args()
 
-HOST = '127.0.0.1'
+HOST = '0.0.0.0'
 PORT = args.port
 
 war_ranks = {
